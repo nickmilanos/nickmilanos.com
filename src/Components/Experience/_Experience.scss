@@ -1,0 +1,30 @@
+#eduexp{
+    width:50%;
+    margin:130px auto 0 auto;
+    text-align:left;
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    h4{
+        margin-top:20px;
+    }   
+    .eduExpDetails{
+        width:70%;
+        font-size:0.93rem;
+        margin-bottom:40px;
+    }
+    h2:last-of-type{
+        width:78%;
+        border-top:1px solid rgba(194,91,86, 0.4);
+        padding-top:30px;
+    }
+}
+@media (max-width:702px){
+    #eduexp{
+        width:80%;
+    }
+}

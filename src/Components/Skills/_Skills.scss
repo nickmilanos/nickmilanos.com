@@ -1,0 +1,41 @@
+#languages{
+    line-height:210%;
+    max-width:50%;
+    text-align:left;
+    margin-left:25%;
+    margin-top:130px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(194,91,86, 0.4);
+
+}
+.techAndToolsContainer{
+    @include flexLayout();
+    max-width:50%;
+    margin:20px auto 0 auto;
+    justify-content:space-between;
+    div{
+        text-align:left;
+        width:330px;
+    }
+    ul{
+        line-height:210%;
+        font-size:0.8rem;
+        list-style:none;
+        padding-left:0;
+        li{
+            cursor:pointer;
+            &:hover{
+                background: rgba(0, 0, 0, 0.06);
+                font-size:0.87rem;
+                cursor:pointer;
+            }
+        }
+    }
+}
+@media (max-width:1389px){
+   #tools{
+        text-align:left;
+        width:330px;
+        border-top:1px solid rgba(194,91,86, 0.4);
+    }
+}

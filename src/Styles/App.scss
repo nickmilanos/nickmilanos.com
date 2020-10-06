@@ -6,3 +6,266 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+$primaryColor: #C25B56;
+$primaryTextShadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+0px 8px 13px rgba(0, 0, 0, 0.1),
+0px 18px 23px rgba(0, 0, 0, 0.1);
+@mixin flexLayout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: Ubuntu;
+    font-weight: 100;
+    overflow-x: hidden;
+}
+
+
+/* Hero Section */
+
+#hero_image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Resources/newhero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    blockquote {
+        position: absolute;
+        top: 86%;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        color: rgba(189, 189, 189, 0.9);
+        font-style: italic;
+        line-height: 0.7;
+    }
+}
+
+@media (max-width:768px) {
+    #hero_image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Resources/heromobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+#heroText {
+    padding-top: 200px;
+    display: none;
+    color: white;
+    text-shadow: $primaryTextShadow;
+    h1 {
+        color: white;
+        font-size: 3.4em;
+        padding-bottom: 10px;
+    }
+    p {
+        text-align: center;
+        padding-top: 10px;
+        width: 560px;
+        margin: 0 auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+}
+
+@media (max-width:545px) {
+    #heroText {
+        padding-top: 150px;
+    }
+    #about_me_inner,
+    #eduexp,
+    #languages,
+    #inner_portfolio,
+    #inner_contact {
+        margin-top: 90px !important;
+    }
+}
+
+#spans,
+.fa-angle-double-down {
+    color: white;
+    text-shadow: $primaryTextShadow;
+}
+
+@media (max-width: 812px) {
+    #heroText p {
+        width: auto !important;
+    }
+}
+
+#spans {
+    text-align: center;
+    padding-top: 40px;
+    span {
+        opacity: 0;
+        margin: 0 15px;
+        transition: 1s;
+    }
+}
+
+@media (max-width:768px) {
+    #spans span,
+    .fa-angle-double-down {
+        opacity: 1;
+    }
+}
+
+.fa-angle-double-down {
+    opacity: 0;
+    transition: 1s;
+    position: absolute;
+    left: 50%;
+    top: 530px;
+    animation: move 0.6s 6s infinite alternate;
+}
+
+@keyframes move {
+    100% {
+        color: #C25B56;
+        top: 540px;
+    }
+}
+
+@media (max-width:481px) {
+    blockquote {
+        display: none;
+    }
+}
+
+
+/* Main Body */
+
+#mainContainer {
+    width: 96%;
+    margin: 200px auto 0 auto;
+    border-radius: 0.4% 0.4% 0 0;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 75%;
+    left: 2%;
+    background: #F3EFE0;
+    #about_me,
+    #experience,
+    #skills,
+    #portfolio,
+    #contact {
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    #experience,
+    #portfolio {
+        background: white;
+    }
+}
+
+#fewWords {
+    text-align: left;
+    width: 290px;
+}
+
+h1 {
+    padding-top: 85px;
+    text-align: center;
+    font-size: 53px;
+    color: $primaryColor;
+    font-weight: 100;
+    margin: 0;
+}
+
+h2 {
+    color: $primaryColor;
+    font-weight: 100;
+}
+
+#about_me_inner {
+    @include flexLayout();
+    max-width: 55%;
+    margin: 130px auto 140px auto;
+    align-items: center;
+    justify-content: space-between;
+    #myphoto {
+        width: 270px;
+        border-radius: 50%;
+        filter: brightness(87%);
+        border: 1px solid gray;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (max-width: 1075px) {
+    #about_me_inner {
+        justify-content: center;
+        align-items: start;
+    }
+    #fewWords {
+        text-align: center;
+        width: auto;
+    }
+}
+
+#personalInfo {
+    text-align: left;
+    line-height: 31px;
+    width: 290px;
+    #military {
+        display: none;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 4%;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        width: 320px;
+        position: absolute;
+        top: 11.5%;
+        left: 72%;
+    }
+    .fa-map-marker-alt,
+    .fa-question-circle {
+        text-decoration: none;
+        color: rgba(194, 91, 86, 0.5);
+        &:hover {
+            color: rgba(194, 91, 86, 1);
+        }
+    }
+}
+
+@media (max-width:1621px) {
+    .far.fa-question-circle {
+        display: none;
+    }
+}
+
+h4,
+h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    display: inline-block;
+}
+
+#about_me a {
+    color: #74828F;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@import '../Components/Navbar/Navbar';
+@import '../Components/Experience/Experience';
+@import '../Components/Skills/Skills';
+@import '../Components/Portfolio/Portfolio';
+@import '../Components/Contact/Contact';

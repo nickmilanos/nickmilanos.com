@@ -1,0 +1,81 @@
+#inner_portfolio{
+    @include flexLayout();
+    margin-top:130px;
+    justify-content:space-evenly;
+    #memoryGameWrap{
+        width:490px;
+    }
+    #todoList, #memoryGame, #colorGame{
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    #todoList{
+        background-image:url("../../Resources/todo_compressed.gif");
+    }
+    #memoryGame{
+        background-image:url("../../Resources/memoryGame_compressed.gif");
+        width:490px;
+    }
+    #colorGame{
+        background-image:url("../../Resources/colorGame_compressed.gif");
+    }
+    h4{
+        opacity:0.75;
+    }
+    a{
+        color:#74828F;
+        text-decoration:none;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+}
+.projectWraps{
+    width:370px;
+    height:690px;
+    h4{
+        margin-bottom:20px;
+    }
+}
+
+.projects{
+    height: 460px;    
+    border-radius:4%;
+    box-shadow:0px 3px 25px rgba(0,0,0,0.5);
+    margin-bottom:60px;
+    transition: 0.6s;
+    h4{
+        color:white;
+        display:none;
+        transition: 1s;
+        position:absolute;
+        bottom:10px;
+        width:100%;
+    }
+}
+
+#portfolio a{
+    color:#74828F;
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+
+@media screen and (max-width:540px){
+    #inner_portfolio #memoryGame{
+        margin:0 auto 60px auto;
+        width:370px;
+    }
+}
+@media screen and (min-width:812px){
+    .projects:hover{
+        filter:brightness(60%);
+        transform:scale(1.03);
+    }
+    .projects:hover h4{
+        display:block;
+    }
+}
