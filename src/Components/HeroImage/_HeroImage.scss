@@ -1,0 +1,92 @@
+.hero_image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../Resources/newhero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    #heroText {
+        padding-top: 200px;
+        display: none;
+        color: $secondaryTextColor;
+        text-shadow: $primaryTextShadow;
+        h1 {
+            color: $secondaryTextColor;
+            font-size: 3.4em;
+            padding-bottom: 10px;
+        }
+        p {
+            text-align: center;
+            padding-top: 10px;
+            width: 560px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    }
+    .spans {
+        text-align: center;
+        padding-top: 40px;
+        color: $secondaryTextColor;
+        text-shadow: $primaryTextShadow;
+        span {
+            opacity: 0;
+            margin: 0 15px;
+            transition: 1s;
+        }
+    }
+    .fa-angle-double-down {
+        opacity: 0;
+        transition: 1s;
+        position: absolute;
+        left: 50%;
+        top: 530px;
+        animation: move 0.6s 6s infinite alternate;
+        color: $secondaryTextColor;
+        text-shadow: $primaryTextShadow;
+    }
+    blockquote {
+        position: absolute;
+        top: 86%;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        color: rgba(189, 189, 189, 0.9);
+        font-style: italic;
+        line-height: 0.7;
+    }
+}
+
+@media (max-width:768px) {
+    .hero_image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../Resources/heromobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .spans span, .fa-angle-double-down {
+        opacity: 1;
+    }
+}
+
+@media (max-width:545px) {
+    #heroText { padding-top: 150px; }
+    #about_me_inner, #eduexp, #languages, #inner_portfolio, #inner_contact {
+        margin-top: 90px !important;
+    }
+}
+
+@media (max-width: 812px) {
+    #heroText{ display:block; }
+    #heroText p { width: auto !important; }
+}
+
+@keyframes move {
+    100% {
+        color: #C25B56;
+        top: 540px;
+    }
+}
+
+@media (max-width:481px) {
+    blockquote { display: none; }
+}

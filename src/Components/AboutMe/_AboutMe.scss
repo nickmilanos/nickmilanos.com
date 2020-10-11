@@ -1,0 +1,68 @@
+.about_me{
+    a{
+        color: #74828F;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    #about_me_inner {
+        @include flexLayout();
+        max-width: 55%;
+        margin: 130px auto 140px auto;
+        align-items: center;
+        justify-content: space-between;
+        #myphoto {
+            width: 270px;
+            border-radius: 50%;
+            filter: brightness(87%);
+            border: 1px solid gray;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+        }
+        .fewWords {
+            text-align: left;
+            width: 290px;
+        }
+        .personalInfo {
+            text-align: left;
+            line-height: 31px;
+            width: 290px;
+            #military {
+                display: none;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: $borderRadius;
+                color: $secondaryTextColor;
+                font-size: 18px;
+                font-weight: 400;
+                text-align: center;
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                width: 320px;
+                position: absolute;
+                top: 11.5%;
+                left: 72%;
+            }
+            .fa-map-marker-alt, .fa-question-circle{
+                text-decoration: none;
+                color: rgba(194, 91, 86, 0.5);
+                &:hover {
+                    color: rgba(194, 91, 86, 1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1075px) {
+    #about_me_inner {
+        justify-content: center;
+        align-items: start;
+    }
+    .fewWords {
+        text-align: center;
+        width: auto;
+    }
+}
+
+@media (max-width:1621px) {
+    .far.fa-question-circle { display: none; }
+}

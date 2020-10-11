@@ -1,9 +1,9 @@
 import React from 'react';
 import '../Styles/App.scss';
-import {AboutMe} from './AboutMe';
+import {AboutMe} from './AboutMe/AboutMe';
 import {Contact} from './Contact/Contact';
 import {Experience} from './Experience/Experience';
-import {HeroImage} from './HeroImage';
+import {HeroImage} from './HeroImage/HeroImage';
 import {Portfolio} from './Portfolio/Portfolio';
 import {Skills} from './Skills/Skills';
 
@@ -21,3 +21,5 @@ export const App = () =>  {
     </div>
   );
 }
+
+// !!!! CV not working!!!!!

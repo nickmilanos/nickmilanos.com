@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Navbar = () => {
     return(
-        <>
+        <div>
             <div id="navbar">
                     <a className="right" id="aboutmeButton">About me</a>
                     <a className="right" id="experienceButton">Experiences</a>
@@ -13,6 +13,6 @@ export const Navbar = () => {
             <div id="burger">
                 <i class="fa fa-bars"></i>
             </div>
-        </>
+        </div>
     );
 }

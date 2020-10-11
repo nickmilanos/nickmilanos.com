@@ -8,7 +8,6 @@ export const Contact = () => {
                 <div id="epilogue">
                     <p>
                         <i>Thank you for visiting my website!<br />
-                            It was an honour.<br />
                             I would be glad to know your opinion about my work or
                             answer any question about the implementation.
                             If you have any tips/recommendations that will make me a better programmer,

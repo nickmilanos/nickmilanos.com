@@ -10,19 +10,13 @@
         background-repeat:no-repeat;
         background-position:center;
     }
-    #todoList{
-        background-image:url("../../Resources/todo_compressed.gif");
-    }
+    #todoList{ background-image:url("../../Resources/todo_compressed.gif"); }
     #memoryGame{
         background-image:url("../../Resources/memoryGame_compressed.gif");
         width:490px;
     }
-    #colorGame{
-        background-image:url("../../Resources/colorGame_compressed.gif");
-    }
-    h4{
-        opacity:0.75;
-    }
+    #colorGame{ background-image:url("../../Resources/colorGame_compressed.gif"); }
+    h4{ opacity:0.75; }
     a{
         color:#74828F;
         text-decoration:none;
@@ -41,12 +35,12 @@
 
 .projects{
     height: 460px;    
-    border-radius:4%;
+    border-radius: $borderRadius;
     box-shadow:0px 3px 25px rgba(0,0,0,0.5);
     margin-bottom:60px;
     transition: 0.6s;
     h4{
-        color:white;
+        color: $secondaryTextColor;
         display:none;
         transition: 1s;
         position:absolute;
