@@ -504,6 +504,10 @@ h4 {
   }
 }
 
+.portfolio h2 {
+  margin-bottom: 60px;
+}
+
 .portfolio a {
   color: #74828F;
   text-decoration: none;
@@ -529,7 +533,6 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 130px;
 }
 
 .portfolio .inner_portfolio #todoList {
@@ -593,6 +596,10 @@ h4 {
   margin-right: 10px;
 }
 
+.technologiesUsed {
+  font-weight: 400;
+}
+
 .projects {
   height: 460px;
   border-radius: 9px;
@@ -614,22 +621,14 @@ h4 {
   width: 100%;
 }
 
+.findMoreNotice {
+  margin-top: 70px;
+}
+
 @media screen and (max-width: 540px) {
   .inner_portfolio #memoryGame {
     margin: 0 auto 60px auto;
     width: 370px;
-  }
-}
-
-@media screen and (min-width: 812px) {
-  .projects:hover {
-    -webkit-filter: brightness(30%);
-            filter: brightness(30%);
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-  }
-  .projects:hover h4 {
-    display: block;
   }
 }
 
