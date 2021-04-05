@@ -11,7 +11,7 @@ export const Navbar = () => {
                     <a className="right" id="contactButton">Contact</a>
             </div>
             <div id="burger">
-                <i class="fa fa-bars"></i>
+                <i className="fa fa-bars"></i>
             </div>
         </div>
     );

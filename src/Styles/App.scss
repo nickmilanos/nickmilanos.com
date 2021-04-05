@@ -5,9 +5,12 @@ $primaryTextShadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
                     0px 18px 23px rgba(0, 0, 0, 0.1);
 $borderRadius: 9px;
 
-@mixin flexLayout {
-    display: flex;
-    flex-wrap: wrap;
+@mixin flexLayout($justifyContent: center, $alignItems: stretch, $flexDirection: row, $display: flex, $wrap: wrap){
+    display: $display;
+    flex-wrap: $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
 }
 
 * { box-sizing: border-box; }
@@ -29,39 +32,32 @@ html, body {
     border-radius: $borderRadius $borderRadius 0 0;
     box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 75%;
-    left: 0;
-    right: 0;
+    top: 75%; left: 0; right: 0;
     background: #F3EFE0;
-    .about_me, #experience, #skills, #portfolio, #contact {
-        text-align: center;
-        padding-bottom: 70px;
-    }
-    #experience, #portfolio {
-        background: white;
-    }
+    .experience, .portfolio { background: white; }
+}
+
+.mainSection{
+    text-align: center;
+    padding: 120px 22% 70px 22%;
 }
 
 h1 {
-    padding-top: 85px;
     text-align: center;
     font-size: 53px;
     color: $primaryColor;
     font-weight: 100;
-    margin: 0;
+    margin: 0 0 130px 0;
 }
-
 h2 {
     color: $primaryColor;
     font-weight: 100;
 }
-
-h4, h5 {
+h4 {
     margin-top: 0;
     margin-bottom: 0;
+    display: inline-block;
 }
-
-h4 { display: inline-block; }
 
 @import '../Components/Navbar/Navbar';
 @import '../Components/HeroImage/HeroImage';

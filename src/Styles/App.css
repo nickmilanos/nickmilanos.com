@@ -26,22 +26,21 @@ html, body {
   background: #F3EFE0;
 }
 
-#mainContainer .about_me, #mainContainer #experience, #mainContainer #skills, #mainContainer #portfolio, #mainContainer #contact {
-  text-align: center;
-  padding-bottom: 70px;
-}
-
-#mainContainer #experience, #mainContainer #portfolio {
+#mainContainer .experience, #mainContainer .portfolio {
   background: white;
 }
 
+.mainSection {
+  text-align: center;
+  padding: 120px 22% 70px 22%;
+}
+
 h1 {
-  padding-top: 85px;
   text-align: center;
   font-size: 53px;
   color: #C25B56;
   font-weight: 100;
-  margin: 0;
+  margin: 0 0 130px 0;
 }
 
 h2 {
@@ -49,23 +48,19 @@ h2 {
   font-weight: 100;
 }
 
-h4, h5 {
+h4 {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-h4 {
   display: inline-block;
 }
 
 #navbar {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: white;
   position: absolute;
   top: 7%;
   right: 5%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  opacity: 0.9;
 }
 
 #navbar .right {
@@ -115,20 +110,20 @@ h4 {
   position: absolute;
 }
 
-.hero_image #heroText {
-  padding-top: 200px;
-  display: none;
+.hero_image .heroText {
+  padding-top: 300px;
   color: white;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 
-.hero_image #heroText h1 {
+.hero_image .heroText h1 {
   color: white;
   font-size: 3.4em;
   padding-bottom: 10px;
 }
 
-.hero_image #heroText p {
+.hero_image .heroText p {
   text-align: center;
   padding-top: 10px;
   width: 560px;
@@ -187,19 +182,19 @@ h4 {
 }
 
 @media (max-width: 545px) {
-  #heroText {
+  .heroText {
     padding-top: 150px;
   }
-  #about_me_inner, #eduexp, #languages, #inner_portfolio, #inner_contact {
+  #about_me_inner, #eduexp, #languages, .inner_portfolio, #inner_contact {
     margin-top: 90px !important;
   }
 }
 
 @media (max-width: 812px) {
-  #heroText {
+  .heroText {
     display: block;
   }
-  #heroText p {
+  .heroText p {
     width: auto !important;
   }
 }
@@ -224,6 +219,10 @@ h4 {
   }
 }
 
+.isVisible {
+  opacity: 1 !important;
+}
+
 .about_me a {
   color: #74828F;
   text-decoration: none;
@@ -239,18 +238,22 @@ h4 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 55%;
-  margin: 130px auto 140px auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 140px;
 }
 
 .about_me #about_me_inner #myphoto {
-  width: 270px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   -webkit-filter: brightness(87%);
           filter: brightness(87%);
@@ -262,6 +265,7 @@ h4 {
 .about_me #about_me_inner .fewWords {
   text-align: left;
   width: 290px;
+  line-height: 29px;
 }
 
 .about_me #about_me_inner .personalInfo {
@@ -270,7 +274,7 @@ h4 {
   width: 290px;
 }
 
-.about_me #about_me_inner .personalInfo #military {
+.about_me #about_me_inner .personalInfo .military {
   display: none;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 9px;
@@ -316,151 +320,168 @@ h4 {
   }
 }
 
-#eduexp {
-  width: 50%;
-  margin: 130px auto 0 auto;
+.experience .eduexp {
   text-align: left;
 }
 
-#eduexp a {
-  text-decoration: none;
-  color: black;
-}
-
-#eduexp a:hover {
-  text-decoration: underline;
-}
-
-#eduexp h4 {
-  margin-top: 20px;
-}
-
-#eduexp .eduExpDetails {
-  width: 70%;
-  font-size: 0.93rem;
-  margin-bottom: 40px;
-}
-
-#eduexp h2:last-of-type {
-  width: 78%;
+.experience .eduexp h2:last-of-type {
   border-top: 1px solid rgba(194, 91, 86, 0.4);
   padding-top: 30px;
 }
 
+.experience .expSection a {
+  text-decoration: none;
+  color: black;
+}
+
+.experience .expSection a:hover {
+  text-decoration: underline;
+}
+
+.experience .expSection .eduExpDetails {
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.experience .expSection .expSectionHeader .boldPart {
+  font-weight: 500;
+}
+
 @media (max-width: 702px) {
-  #eduexp {
+  .experience #eduexp {
     width: 80%;
   }
 }
 
-#languages {
+.skills #languages {
   line-height: 210%;
-  max-width: 50%;
   text-align: left;
-  margin-left: 25%;
-  margin-top: 130px;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(194, 91, 86, 0.4);
 }
 
-.techAndToolsContainer {
+.skills .techAndToolsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 50%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 20px auto 0 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.techAndToolsContainer div {
+.skills .techAndToolsContainer .tech {
+  margin-right: 80px;
+}
+
+.skills .techAndToolsContainer div {
   text-align: left;
   width: 330px;
 }
 
-.techAndToolsContainer ul {
-  line-height: 210%;
-  font-size: 0.8rem;
+.skills .techAndToolsContainer ul {
   list-style: none;
   padding-left: 0;
 }
 
-.techAndToolsContainer ul li {
-  cursor: pointer;
+.skills .techAndToolsContainer ul li {
+  padding: 7px;
 }
 
-.techAndToolsContainer ul li:hover {
+.skills .techAndToolsContainer ul li:hover {
   background: rgba(0, 0, 0, 0.06);
-  font-size: 0.87rem;
-  cursor: pointer;
+  font-weight: 400;
 }
 
 @media (max-width: 1389px) {
-  #tools {
+  .skills .tools {
     text-align: left;
     width: 330px;
     border-top: 1px solid rgba(194, 91, 86, 0.4);
   }
 }
 
-#inner_portfolio {
+.portfolio a {
+  color: #74828F;
+  text-decoration: none;
+}
+
+.portfolio a:hover {
+  text-decoration: underline;
+}
+
+.portfolio .inner_portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 130px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 130px;
 }
 
-#inner_portfolio #memoryGameWrap {
-  width: 490px;
-}
-
-#inner_portfolio #todoList, #inner_portfolio #memoryGame, #inner_portfolio #colorGame {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#inner_portfolio #todoList {
+.portfolio .inner_portfolio #todoList {
   background-image: url("../../Resources/todo_compressed.gif");
 }
 
-#inner_portfolio #memoryGame {
+.portfolio .inner_portfolio #colorGame {
+  background-image: url("../../Resources/colorGame_compressed.gif");
+}
+
+.portfolio .inner_portfolio #memoryGameWrap {
+  width: 490px;
+}
+
+.portfolio .inner_portfolio #memoryGame {
   background-image: url("../../Resources/memoryGame_compressed.gif");
   width: 490px;
 }
 
-#inner_portfolio #colorGame {
-  background-image: url("../../Resources/colorGame_compressed.gif");
-}
-
-#inner_portfolio h4 {
-  opacity: 0.75;
-}
-
-#inner_portfolio a {
+.portfolio .inner_portfolio a {
   color: #74828F;
   text-decoration: none;
 }
 
-#inner_portfolio a:hover {
+.portfolio .inner_portfolio a:hover {
   text-decoration: underline;
 }
 
-.projectWraps {
+.portfolio .inner_portfolio .projectWraps {
   width: 370px;
   height: 690px;
 }
 
-.projectWraps h4 {
+.portfolio .inner_portfolio .projectWraps h4 {
   margin-bottom: 20px;
+}
+
+.portfolio .professionalProjects {
+  width: 50%;
+}
+
+.portfolio .professionalProjects .topokatImage {
+  height: 350px;
+  width: 350px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../Resources/todo_compressed.gif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../Resources/todo_compressed.gif");
 }
 
 .projects {
@@ -471,6 +492,9 @@ h4 {
   margin-bottom: 60px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .projects h4 {
@@ -483,17 +507,8 @@ h4 {
   width: 100%;
 }
 
-#portfolio a {
-  color: #74828F;
-  text-decoration: none;
-}
-
-#portfolio a:hover {
-  text-decoration: underline;
-}
-
 @media screen and (max-width: 540px) {
-  #inner_portfolio #memoryGame {
+  .inner_portfolio #memoryGame {
     margin: 0 auto 60px auto;
     width: 370px;
   }
@@ -501,8 +516,8 @@ h4 {
 
 @media screen and (min-width: 812px) {
   .projects:hover {
-    -webkit-filter: brightness(60%);
-            filter: brightness(60%);
+    -webkit-filter: brightness(30%);
+            filter: brightness(30%);
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
   }
@@ -511,26 +526,78 @@ h4 {
   }
 }
 
-#contact {
+.contact {
   background: #525564;
 }
 
-#contact #inner_contact {
+.contact #inner_contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 130px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#contact #backToTop {
+.contact #inner_contact .epilogue {
+  font-style: italic;
+  line-height: 30px;
+  color: #F3EFE0;
+}
+
+.contact #inner_contact .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 60px;
+  font-size: 0.7em;
+  width: 16%;
+  min-width: 160px;
+}
+
+.contact #inner_contact .contacts a {
+  text-decoration: none;
+  color: #9ea1b5;
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
+}
+
+.contact #inner_contact .contacts a:hover {
+  color: white;
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.contact #inner_contact .contacts .fab, .contact #inner_contact .contacts .fa-at {
+  color: white;
+  border-radius: 12%;
+}
+
+.contact #backToTop {
   width: 120px;
   float: right;
   margin: 0 50px 20px 0;
@@ -542,38 +609,8 @@ h4 {
           animation: changeColor 2s infinite alternate;
 }
 
-#epilogue {
-  text-align: left;
-  font-size: 1.1rem;
-  color: #F3EFE0;
-  width: 35%;
-}
-
-#contacts {
-  font-size: 0.8rem;
-  width: 600px;
-  text-align: left;
-}
-
-#contacts a {
-  text-decoration: none;
-  color: #9ea1b5;
-}
-
-#contacts a:hover {
-  color: white;
-  cursor: pointer;
-}
-
-#contacts .fab, #contacts .fa-at {
-  color: white;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  border-radius: 12%;
-}
-
 @media (max-width: 1112px) {
-  #epilogue {
+  .epilogue {
     text-align: center;
     width: 80%;
     margin-bottom: 40px;
@@ -581,16 +618,16 @@ h4 {
 }
 
 @media screen and (max-width: 680px) {
-  #contacts {
+  .contacts {
     text-align: center;
   }
-  #contacts span {
+  .contacts span {
     display: none;
   }
-  #contacts .fab, #contacts .fa-at {
+  .contacts .fab, .contacts .fa-at {
     margin-right: 0;
   }
-  #epilogue {
+  .epilogue {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     text-align: left;
   }

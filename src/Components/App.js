@@ -13,13 +13,11 @@ export const App = () =>  {
       <HeroImage />
       <div id="mainContainer">
         <AboutMe />
-        <Experience />
-        <Skills />
         <Portfolio />
+        <Skills />
+        <Experience />
         <Contact />
       </div>
     </div>
   );
 }
-
-// !!!! CV not working!!!!!

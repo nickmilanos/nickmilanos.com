@@ -1,35 +1,37 @@
-#inner_portfolio{
-    @include flexLayout();
-    margin-top:130px;
-    justify-content:space-evenly;
-    #memoryGameWrap{
-        width:490px;
-    }
-    #todoList, #memoryGame, #colorGame{
-        background-size:100% 100%;
-        background-repeat:no-repeat;
-        background-position:center;
-    }
-    #todoList{ background-image:url("../../Resources/todo_compressed.gif"); }
-    #memoryGame{
-        background-image:url("../../Resources/memoryGame_compressed.gif");
-        width:490px;
-    }
-    #colorGame{ background-image:url("../../Resources/colorGame_compressed.gif"); }
-    h4{ opacity:0.75; }
+.portfolio{
     a{
         color:#74828F;
         text-decoration:none;
-        &:hover{
-            text-decoration:underline;
+        &:hover{ text-decoration:underline; }
+    }
+    .inner_portfolio{
+        @include flexLayout($justifyContent: space-evenly);
+        margin-top:130px;
+        #todoList{ background-image:url("../../Resources/todo_compressed.gif"); }
+        #colorGame{ background-image:url("../../Resources/colorGame_compressed.gif"); }
+        #memoryGameWrap{ width:490px; }
+        #memoryGame{
+            background-image:url("../../Resources/memoryGame_compressed.gif");
+            width:490px;
+        }
+        a{
+            color:#74828F;
+            text-decoration:none;
+            &:hover{ text-decoration:underline; }
+        }
+        .projectWraps{
+            width:370px;
+            height:690px;
+            h4{ margin-bottom:20px; }
         }
     }
-}
-.projectWraps{
-    width:370px;
-    height:690px;
-    h4{
-        margin-bottom:20px;
+    .professionalProjects{
+        width: 50%;
+        .topokatImage{
+            height: 350px;
+            width: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../Resources/todo_compressed.gif");
+        }
     }
 }
 
@@ -39,6 +41,9 @@
     box-shadow:0px 3px 25px rgba(0,0,0,0.5);
     margin-bottom:60px;
     transition: 0.6s;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
     h4{
         color: $secondaryTextColor;
         display:none;
@@ -49,27 +54,16 @@
     }
 }
 
-#portfolio a{
-    color:#74828F;
-    text-decoration:none;
-    &:hover{
-        text-decoration:underline;
-    }
-}
-
-
 @media screen and (max-width:540px){
-    #inner_portfolio #memoryGame{
+    .inner_portfolio #memoryGame{
         margin:0 auto 60px auto;
         width:370px;
     }
 }
 @media screen and (min-width:812px){
     .projects:hover{
-        filter:brightness(60%);
+        filter:brightness(30%);
         transform:scale(1.03);
     }
-    .projects:hover h4{
-        display:block;
-    }
+    .projects:hover h4{ display:block; }
 }

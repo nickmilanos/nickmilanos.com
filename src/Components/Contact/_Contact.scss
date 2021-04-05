@@ -1,16 +1,39 @@
-#contact{
+.contact{
     background:#525564;
     #inner_contact{
-        @include flexLayout();
-        margin-top:130px;
-        justify-content: space-evenly;
-        align-items:center;
+        @include flexLayout($flexDirection: column, $justifyContent: space-between, $alignItems: center);
+        .epilogue{
+            font-style: italic;
+            line-height: 30px;
+            color: #F3EFE0;
+        }
+        .contacts{
+            @include flexLayout($justifyContent: space-between);
+            margin-top: 60px;
+            font-size:0.7em;
+            width:16%;
+            min-width: 160px;
+            a{
+                text-decoration:none;
+                color:rgb(158, 161, 181);
+                transition: transform 0.1s ease-in;
+                &:hover{
+                    color:$secondaryTextColor;
+                    cursor:pointer;
+                    transform: scale(1.4);
+                }
+            }
+            .fab, .fa-at{
+                color:$secondaryTextColor;
+                border-radius:12%;
+            }
+        }
     }
     #backToTop{
         width:120px;
         float:right;
         margin: 0 50px 20px 0;
-        color:white;
+        color:$secondaryTextColor;
         cursor:pointer;
         text-decoration:none;
         text-shadow: $primaryTextShadow;
@@ -18,35 +41,8 @@
     }
 }
 
-#epilogue{
-    text-align:left;
-    font-size:1.1rem;
-    color: #F3EFE0;
-    width: 35%;
-}
-
-#contacts{
-    font-size:0.8rem;
-    width:600px;
-    text-align:left;
-    a{
-        text-decoration:none;
-        color:rgb(158, 161, 181);
-        &:hover{
-            color:white;
-            cursor:pointer;
-        }
-    }
-    .fab, .fa-at{
-        color:white;
-        margin-bottom:30px;
-        margin-right:30px;
-        border-radius:12%;
-    }
-}
-
 @media (max-width: 1112px){
-    #epilogue{
+    .epilogue{
         text-align:center;
         width:80%;
         margin-bottom:40px;
@@ -54,16 +50,12 @@
 }
 
 @media screen and (max-width: 680px){
-    #contacts{
+    .contacts{
         text-align:center;
-        span{
-            display:none;
-        }
-        .fab, .fa-at{
-            margin-right:0;
-        }
+        span{ display:none; }
+        .fab, .fa-at{ margin-right:0; }
     }
-    #epilogue{
+    .epilogue{
         border-bottom:1px solid rgba(255,255,255, 0.4);
         text-align:left;
     }
@@ -74,6 +66,4 @@
 }
 
 @keyframes changeColor
-{
-    100%{color: #C25B56;}
-}
+{ 100%{color: #C25B56;} }

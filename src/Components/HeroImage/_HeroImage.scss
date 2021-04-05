@@ -6,11 +6,11 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    #heroText {
-        padding-top: 200px;
-        display: none;
+    .heroText {
+        padding-top: 300px;
         color: $secondaryTextColor;
         text-shadow: $primaryTextShadow;
+        opacity: 0;
         h1 {
             color: $secondaryTextColor;
             font-size: 3.4em;
@@ -63,21 +63,19 @@
         background-repeat: no-repeat;
         background-position: center;
     }
-    .spans span, .fa-angle-double-down {
-        opacity: 1;
-    }
+    .spans span, .fa-angle-double-down { opacity: 1; }
 }
 
 @media (max-width:545px) {
-    #heroText { padding-top: 150px; }
-    #about_me_inner, #eduexp, #languages, #inner_portfolio, #inner_contact {
+    .heroText { padding-top: 150px; }
+    #about_me_inner, #eduexp, #languages, .inner_portfolio, #inner_contact {
         margin-top: 90px !important;
     }
 }
 
 @media (max-width: 812px) {
-    #heroText{ display:block; }
-    #heroText p { width: auto !important; }
+    .heroText{ display:block; }
+    .heroText p { width: auto !important; }
 }
 
 @keyframes move {
@@ -90,3 +88,6 @@
 @media (max-width:481px) {
     blockquote { display: none; }
 }
+
+
+.isVisible{ opacity: 1 !important;}

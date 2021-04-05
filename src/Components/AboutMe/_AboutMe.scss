@@ -2,18 +2,14 @@
     a{
         color: #74828F;
         text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+        &:hover { text-decoration: underline; }
     }
     #about_me_inner {
-        @include flexLayout();
-        max-width: 55%;
-        margin: 130px auto 140px auto;
-        align-items: center;
-        justify-content: space-between;
+        @include flexLayout($justifyContent: space-between, $alignItems: center);
+        margin-bottom: 140px;
         #myphoto {
-            width: 270px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             filter: brightness(87%);
             border: 1px solid gray;
@@ -22,12 +18,13 @@
         .fewWords {
             text-align: left;
             width: 290px;
+            line-height: 29px;
         }
         .personalInfo {
             text-align: left;
             line-height: 31px;
             width: 290px;
-            #military {
+            .military {
                 display: none;
                 background: rgba(0, 0, 0, 0.7);
                 border-radius: $borderRadius;
@@ -44,9 +41,7 @@
             .fa-map-marker-alt, .fa-question-circle{
                 text-decoration: none;
                 color: rgba(194, 91, 86, 0.5);
-                &:hover {
-                    color: rgba(194, 91, 86, 1);
-                }
+                &:hover { color: rgba(194, 91, 86, 1); }
             }
         }
     }
@@ -63,6 +58,4 @@
     }
 }
 
-@media (max-width:1621px) {
-    .far.fa-question-circle { display: none; }
-}
+@media (max-width:1621px) { .far.fa-question-circle { display: none; } }
