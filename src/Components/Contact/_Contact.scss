@@ -4,7 +4,7 @@
         @include flexLayout($flexDirection: column, $justifyContent: space-between, $alignItems: center);
         .epilogue{
             font-style: italic;
-            line-height: 30px;
+            line-height: $lineHeight;
             color: #F3EFE0;
         }
         .contacts{
@@ -29,16 +29,6 @@
             }
         }
     }
-    #backToTop{
-        width:120px;
-        float:right;
-        margin: 0 50px 20px 0;
-        color:$secondaryTextColor;
-        cursor:pointer;
-        text-decoration:none;
-        text-shadow: $primaryTextShadow;
-        animation: changeColor 2s infinite alternate;
-    }
 }
 
 @media (max-width: 1112px){
@@ -59,11 +49,5 @@
         border-bottom:1px solid rgba(255,255,255, 0.4);
         text-align:left;
     }
-    #backToTop{
-        float:right;
-        margin:0 !important;
-    }
-}
 
-@keyframes changeColor
-{ 100%{color: #C25B56;} }
+}

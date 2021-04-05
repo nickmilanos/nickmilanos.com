@@ -1,14 +1,15 @@
 import React from 'react';
+import {scrollDown} from '../../UtilityFunctions';
 
 export const Navbar = () => {
     return(
         <div>
             <div id="navbar">
-                    <a className="right" id="aboutmeButton">About me</a>
-                    <a className="right" id="experienceButton">Experiences</a>
-                    <a className="right" id="skillsButton">Skills</a>
-                    <a className="right" id="portfolioButton">Portfolio</a>
-                    <a className="right" id="contactButton">Contact</a>
+                    <span className="right" onClick={() => scrollDown(".about_me")}>About me</span>
+                    <span className="right" onClick={() => scrollDown(".portfolio")}>Portfolio</span>
+                    <span className="right" onClick={() => scrollDown(".skills")}>Skills</span>
+                    <span className="right" onClick={() => scrollDown(".experience")}>Experiences</span>
+                    <span className="right" onClick={() => scrollDown(".contact")}>Contact</span>
             </div>
             <div id="burger">
                 <i className="fa fa-bars"></i>

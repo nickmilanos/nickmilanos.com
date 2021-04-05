@@ -18,11 +18,10 @@
         .fewWords {
             text-align: left;
             width: 290px;
-            line-height: 29px;
+            line-height: $lineHeight;
         }
         .personalInfo {
-            text-align: left;
-            line-height: 31px;
+            @include flexLayout($flexDirection: column, $justifyContent: center, $alignItems: flex-start);
             width: 290px;
             .military {
                 display: none;
@@ -37,6 +36,15 @@
                 position: absolute;
                 top: 11.5%;
                 left: 72%;
+            }
+            .infoHeader{
+                font-weight: 400;
+                margin-bottom: 5px;
+                i{ margin-left: 15px; }
+            }
+            .infoElement{
+                margin-bottom: 20px;
+                a{ margin-left: 15px; }
             }
             .fa-map-marker-alt, .fa-question-circle{
                 text-decoration: none;

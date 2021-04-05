@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { scrollDown } from '../../UtilityFunctions';
 import {Navbar} from '../Navbar/Navbar';
 
 export const HeroImage = () => {
@@ -15,13 +16,10 @@ export const HeroImage = () => {
                 <p>Junior Web Developer</p>
             </div>
             <div className="spans">
-                <span>Ambition <i className="fas fa-check-circle"></i></span>
-                <span>Potential <i className="fas fa-check-circle"></i></span>
-                <span>Effort <i className="fas fa-check-circle"></i></span>
+                <span onClick={() => scrollDown(".about_me")}><i className="fas fa-angle-double-up fa-2x"></i></span>
             </div>
-            <i className="fas fa-angle-double-down fa-2x"></i>
             <blockquote>
-                <p>"The only way to do great work,is to love what you do."</p>
+                <p>"The only way to do great work, is to love what you do."</p>
                 <footer>-Steve Jobs</footer>
             </blockquote>
         </div>

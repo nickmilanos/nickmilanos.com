@@ -1,13 +1,12 @@
 #navbar{
-    font-size: 1.1em;
     color: $secondaryTextColor;
-    position:absolute;
-    top:7%;
-    right:5%;
+    position: absolute;
+    top: 7%; right: 5%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     .right{
         margin-right:40px;
         padding-top:1%;
+        transition: all 0.2s;
     }
     *:hover{
         color: $primaryColor;

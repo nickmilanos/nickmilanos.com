@@ -10,8 +10,8 @@ export const Skills = () => {
                 <h1>Skills</h1>
                 <div id="languages">
                     <h2>Languages</h2>
-                    <span><strong>Greek -</strong> Mother Tongue</span><br />
-                    <span><strong>English -</strong> Certificate of Proficiency in English-Univercity of Michigan (2007)</span>
+                    <span className="language">Greek</span><span>Mother Tongue</span><br />
+                    <span className="language">English</span><span>Certificate of Proficiency in English-Univercity of Michigan (2007)</span>
                 </div>
                 <div className="techAndToolsContainer">
                     <div className="tech">
