@@ -12,7 +12,7 @@ Other developers may get inspired by my work, if they lack ideas or knowledge of
     * Animations
     * Sass
 * Javascript
-    * JQuery
+    * React.js
 
 ## Status
 All main features are implemented  and project is on line.  
