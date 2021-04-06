@@ -69,9 +69,8 @@
     margin-top: 70px;
 }
 
-@media screen and (max-width:540px){
+@media (max-width:540px){
     .inner_portfolio #memoryGame{
-        margin:0 auto 60px auto;
-        width:370px;
+        width:100% !important;
     }
 }

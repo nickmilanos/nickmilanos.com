@@ -35,11 +35,17 @@ html, body{
     top: 75%; left: 0; right: 0;
     background: #F3EFE0;
     .experience, .portfolio { background: white; }
+    @media (max-width: 700px){
+        width: 99%;
+    }
 }
 
 .mainSection{
     text-align: center;
     padding: 120px 22% 70px 22%;
+    @media (max-width: 700px) {
+        padding: 120px 5% 70px 5%;
+    }
 }
 
 h1 {
@@ -48,6 +54,10 @@ h1 {
     color: $primaryColor;
     font-weight: 100;
     margin: 0 0 130px 0;
+    @media (max-width: 700px){
+        margin: 0 0 50px 0;
+        font-size: 40px;
+    }
 }
 h2 {
     color: $primaryColor;

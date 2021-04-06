@@ -8,7 +8,7 @@ export const Experience = () => {
                 <h2>Education</h2>
                 <div className="expSection">
                     <span className="expSectionHeader"><span className="boldPart">University of Piraeus</span> (last semester)</span><br />
-                    <span className="expSectionHeader"><span className="boldPart">Department of Informatics - Technology of Software and Intelligent Systems direction</span></span>
+                    <span className="expSecondarySectionHeader">Department of Informatics - Technology of Software and Intelligent Systems direction</span>
                     <p className="eduExpDetails">
                         Technologies taught: C#, Java, basics of web developmeuunt(HTML, CSS, Javascript), OOP, Machine Learning Algorithms, A.I concepts, Multimedia(compression/decompression algorithms), Unity3D, Android Development and more.<br />
                         I found me more interested in Web Development and Desktop Application Development, using OOP concepts, C#, CSS, HTML, and JavaScript.<br />
@@ -25,8 +25,8 @@ export const Experience = () => {
 
                 <h2>Professional Experience</h2>
                 <div className="expSection">
-                    <span className="expSectionHeader"><span className="boldPart"><a href="https://www.megaventory.com/">Megaventory Inc.</a></span>  (Jan 2020 - Jun 2020)</span><br /><br />
-                    <span className="expSectionHeader"><b>Fulltime - Junior Full Stack Web Developer</b></span>
+                    <span className="expSectionHeader"><span className="boldPart"><a href="https://www.megaventory.com/">Megaventory Inc.</a></span>  (Jan 2020 - Jun 2020)</span><br />
+                    <span className="expSecondarySectionHeader">Fulltime - Junior Full Stack Web Developer</span>
                     <ul className="eduExpDetails">
                         <li>I have worked as a member of the team, both remotely and in person</li>
                         <li>Got myself involved a lot with APIs by integrating Megaventory with third party applications</li>
@@ -36,7 +36,7 @@ export const Experience = () => {
                 </div>
                 <div className="expSection">
                     <span className="expSectionHeader"><span className="boldPart">Barista - Responsible for coffee post</span></span>
-                    <p className="eduExpDetails">I have obtained invaluable experiences and skills, such as:</p>
+                    <p className="eduExpDetails baristaDescription">I have obtained invaluable experiences and skills, such as:</p>
                     <ul className="eduExpDetails">
                         <li>Taking Responsibilities</li>
                         <li>Working under difficult circumstances, on very demanding environments</li>

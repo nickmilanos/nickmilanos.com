@@ -13,7 +13,7 @@ export const Portfolio = () => {
                         <span className="projectTitle">Future features:</span> A knowledgebase for all users to educate themselves
                         on various topics and services of the domain of constructions, and more.
                     </p>
-                    <a className="regularButton visitDemoButton" target="_blank" rel="noopener noreferrer" href="https://www.nmtest1.com">Visit Demo</a>
+                    <a className="regularButton visitDemoButton" href="https://www.nmtest1.com" target="_blank" rel="noopener noreferrer">View Demo</a>
                 </div>
                 <div className="otherProjects">
                     <h2>Other Projects</h2>

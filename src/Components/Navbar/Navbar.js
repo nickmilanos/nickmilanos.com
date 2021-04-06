@@ -1,17 +1,48 @@
-import React from 'react';
-import {scrollDown} from '../../UtilityFunctions';
+import React, {useState} from 'react';
+import {scrollDown, useWindowDimensions} from '../../UtilityFunctions';
 
 export const Navbar = () => {
+    let [isNavbarVisible, setIsNavbarVisible] = useState(false);
+    let {width} = useWindowDimensions();
+    const onClickHandler = () => {
+        setIsNavbarVisible(isNavbarVisible => !isNavbarVisible);
+    }
+
+    const clickAboutMeHandler = () => {
+        scrollDown(".about_me");
+        setIsNavbarVisible(false);
+    }
+
+    const clickPortfolioHandler = () => {
+        scrollDown(".portfolio");
+        setIsNavbarVisible(false);
+    }
+
+    const clickSkillsHandler = () => {
+        scrollDown(".skills");
+        setIsNavbarVisible(false);
+    }
+
+    const clickExperienceHandler = () => {
+        scrollDown(".experience");
+        setIsNavbarVisible(false);
+    } 
+
+    const clickContactHandler = () => {
+        scrollDown(".contact");
+        setIsNavbarVisible(false);
+    }
+
     return(
         <div>
-            <div id="navbar">
-                    <span className="right" onClick={() => scrollDown(".about_me")}>About me</span>
-                    <span className="right" onClick={() => scrollDown(".portfolio")}>Portfolio</span>
-                    <span className="right" onClick={() => scrollDown(".skills")}>Skills</span>
-                    <span className="right" onClick={() => scrollDown(".experience")}>Experiences</span>
-                    <span className="right" onClick={() => scrollDown(".contact")}>Contact</span>
+            <div className={`navbar ${isNavbarVisible && width < 700 ? "navbarVisible" : ""}`}>
+                    <span className="right" onClick={clickAboutMeHandler}>About me</span>
+                    <span className="right" onClick={clickPortfolioHandler}>Portfolio</span>
+                    <span className="right" onClick={clickSkillsHandler}>Skills</span>
+                    <span className="right" onClick={clickExperienceHandler}>Experiences</span>
+                    <span className="right" onClick={clickContactHandler}>Contact</span>
             </div>
-            <div id="burger">
+            <div id="burger" onClick={onClickHandler} className={isNavbarVisible && width < 700 ? "burgerWhenNavbarVisible" : ""}>
                 <i className="fa fa-bars"></i>
             </div>
         </div>
