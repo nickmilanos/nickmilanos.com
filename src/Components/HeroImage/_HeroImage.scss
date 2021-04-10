@@ -34,27 +34,15 @@
         span{
             cursor: pointer;
             transition: color 0.8s;
-            &:hover{
-                color: $primaryColor;
-            }
+            &:hover{ color: $primaryColor; }
         }
-    }
-    .fa-angle-double-down {
-        opacity: 0;
-        transition: 1s;
-        position: absolute;
-        left: 50%;
-        top: 530px;
-        animation: move 0.6s 6s infinite alternate;
-        color: $secondaryTextColor;
-        text-shadow: $primaryTextShadow;
     }
     blockquote {
         position: absolute;
         top: 86%;
         text-align: center;
         width: 100%;
-        margin: 0;
+        margin: 0 auto;
         color: rgba(189, 189, 189, 0.9);
         font-style: italic;
         line-height: 0.7;
@@ -76,13 +64,6 @@
 @media (max-width: 812px) {
     .heroText{ display:block; }
     .heroText p { width: auto !important; }
-}
-
-@keyframes move {
-    100% {
-        color: #C25B56;
-        top: 540px;
-    }
 }
 
 @media (max-width:481px) {

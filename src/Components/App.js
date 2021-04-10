@@ -20,7 +20,7 @@ export const App = () =>  {
   return (
     <div>
       <HeroImage />
-      <div id="mainContainer">
+      <div className="mainContainer">
         <AboutMe />
         <Portfolio />
         <Skills />

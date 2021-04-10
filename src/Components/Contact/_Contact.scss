@@ -42,11 +42,10 @@
 @media screen and (max-width: 680px){
     .contacts{
         text-align:center;
-        span{ display:none; }
         .fab, .fa-at{ margin-right:0; }
     }
     .epilogue{
-        border-bottom:1px solid rgba(255,255,255, 0.4);
+        border-bottom:1px solid rgba(255,255,255, 0.3);
         text-align:left;
     }
 

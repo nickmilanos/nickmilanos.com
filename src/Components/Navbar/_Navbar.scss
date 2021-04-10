@@ -1,16 +1,24 @@
 .navbar{
+    @include flexLayout();
+    list-style-type: none;
     color: $secondaryTextColor;
     position: absolute;
     top: 7%; right: 5%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    .right{
+    li{
+        cursor: pointer;
         margin-right:40px;
         padding-top:1%;
-        transition: all 0.2s;
     }
-    *:hover{
-        color: $primaryColor;
-        cursor:pointer;
+    li::after{
+        display: inline-block;
+        content: '';
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        width: 0;
+        transition: width 0.2s ease-in;
+    }
+    li:hover::after{
+        width: 100%;
     }
 }
 
@@ -19,6 +27,8 @@
 .navbarVisible{
     display: flex !important;
     flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
 }
 
 .burgerWhenNavbarVisible{
@@ -27,6 +37,7 @@
 
 @media (max-width:812px){
     .navbar{
+        margin: 0;
         z-index: 9;
         display:none;
         position:fixed;
@@ -34,7 +45,7 @@
         width: 80%; height: 100vh;
         text-align:left;
         background-color: $primaryColor;
-        span{
+        li{
             cursor: pointer;
             width: 100%;
             padding-top: 30px!important;
@@ -42,6 +53,7 @@
             padding-left: 10px;
             margin: 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            &:hover::after{ width: 0; }
         }
     }
     #burger{

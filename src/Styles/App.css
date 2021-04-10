@@ -17,25 +17,21 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mainContainer {
+.mainContainer {
   width: 93%;
-  margin: 200px auto 0 auto;
+  margin: 0 auto;
   border-radius: 9px 9px 0 0;
   -webkit-box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 75%;
+  top: 96%;
   left: 0;
   right: 0;
   background: #F3EFE0;
 }
 
-#mainContainer .experience, #mainContainer .portfolio {
-  background: white;
-}
-
 @media (max-width: 700px) {
-  #mainContainer {
+  .mainContainer {
     width: 99%;
   }
 }
@@ -43,6 +39,10 @@ html, body {
 .mainSection {
   text-align: center;
   padding: 120px 22% 70px 22%;
+}
+
+.mainSection:nth-of-type(even) {
+  background-color: white;
 }
 
 @media (max-width: 700px) {
@@ -126,6 +126,22 @@ h4 {
 }
 
 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
   color: white;
   position: absolute;
   top: 7%;
@@ -133,16 +149,23 @@ h4 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-.navbar .right {
+.navbar li {
+  cursor: pointer;
   margin-right: 40px;
   padding-top: 1%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
-.navbar *:hover {
-  color: #C25B56;
-  cursor: pointer;
+.navbar li::after {
+  display: inline-block;
+  content: '';
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+.navbar li:hover::after {
+  width: 100%;
 }
 
 #burger {
@@ -157,6 +180,10 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
 }
 
 .burgerWhenNavbarVisible {
@@ -165,6 +192,7 @@ h4 {
 
 @media (max-width: 812px) {
   .navbar {
+    margin: 0;
     z-index: 9;
     display: none;
     position: fixed;
@@ -175,7 +203,7 @@ h4 {
     text-align: left;
     background-color: #C25B56;
   }
-  .navbar span {
+  .navbar li {
     cursor: pointer;
     width: 100%;
     padding-top: 30px !important;
@@ -183,6 +211,9 @@ h4 {
     padding-left: 10px;
     margin: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .navbar li:hover::after {
+    width: 0;
   }
   #burger {
     display: block;
@@ -250,25 +281,12 @@ h4 {
   color: #C25B56;
 }
 
-.hero_image .fa-angle-double-down {
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-  position: absolute;
-  left: 50%;
-  top: 530px;
-  -webkit-animation: move 0.6s 6s infinite alternate;
-          animation: move 0.6s 6s infinite alternate;
-  color: white;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-}
-
 .hero_image blockquote {
   position: absolute;
   top: 86%;
   text-align: center;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   color: rgba(189, 189, 189, 0.9);
   font-style: italic;
   line-height: 0.7;
@@ -295,20 +313,6 @@ h4 {
   }
   .heroText p {
     width: auto !important;
-  }
-}
-
-@-webkit-keyframes move {
-  100% {
-    color: #C25B56;
-    top: 540px;
-  }
-}
-
-@keyframes move {
-  100% {
-    color: #C25B56;
-    top: 540px;
   }
 }
 
@@ -775,14 +779,11 @@ h4 {
   .contacts {
     text-align: center;
   }
-  .contacts span {
-    display: none;
-  }
   .contacts .fab, .contacts .fa-at {
     margin-right: 0;
   }
   .epilogue {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     text-align: left;
   }
 }

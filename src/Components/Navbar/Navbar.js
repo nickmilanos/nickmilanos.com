@@ -34,17 +34,17 @@ export const Navbar = () => {
     }
 
     return(
-        <div>
-            <div className={`navbar ${isNavbarVisible && width < 700 ? "navbarVisible" : ""}`}>
-                    <span className="right" onClick={clickAboutMeHandler}>About me</span>
-                    <span className="right" onClick={clickPortfolioHandler}>Portfolio</span>
-                    <span className="right" onClick={clickSkillsHandler}>Skills</span>
-                    <span className="right" onClick={clickExperienceHandler}>Experiences</span>
-                    <span className="right" onClick={clickContactHandler}>Contact</span>
-            </div>
+        <>
+            <ul className={`navbar ${isNavbarVisible && width < 700 ? "navbarVisible" : ""}`}>
+                    <li onClick={clickAboutMeHandler}>About me</li>
+                    <li onClick={clickPortfolioHandler}>Portfolio</li>
+                    <li onClick={clickSkillsHandler}>Skills</li>
+                    <li onClick={clickExperienceHandler}>Experiences</li>
+                    <li onClick={clickContactHandler}>Contact</li>
+            </ul>
             <div id="burger" onClick={onClickHandler} className={isNavbarVisible && width < 700 ? "burgerWhenNavbarVisible" : ""}>
                 <i className="fa fa-bars"></i>
             </div>
-        </div>
+        </>
     );
 }
