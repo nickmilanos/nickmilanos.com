@@ -35,14 +35,14 @@ export const Navbar = () => {
 
     return(
         <>
-            <ul className={`navbar ${isNavbarVisible && width < 700 ? "navbarVisible" : ""}`}>
+            <ul className={`navbar ${isNavbarVisible && width < 812 ? "navbarVisible" : ""}`}>
                     <li onClick={clickAboutMeHandler}>About me</li>
                     <li onClick={clickPortfolioHandler}>Portfolio</li>
                     <li onClick={clickSkillsHandler}>Skills</li>
                     <li onClick={clickExperienceHandler}>Experiences</li>
                     <li onClick={clickContactHandler}>Contact</li>
             </ul>
-            <div id="burger" onClick={onClickHandler} className={isNavbarVisible && width < 700 ? "burgerWhenNavbarVisible" : ""}>
+            <div id="burger" onClick={onClickHandler} className={isNavbarVisible && width < 812 ? "burgerWhenNavbarVisible" : ""}>
                 <i className="fa fa-bars"></i>
             </div>
         </>
