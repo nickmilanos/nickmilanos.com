@@ -39,7 +39,6 @@ export const AboutMe = () => {
                     </div> */}
                 </div>
             </div>
-            {/* Download my CV:<a href="Resources/CV_Nick_Milanos.pdf" download>Greek <i className="fas fa-arrow-circle-down"></i></a> */}
         </div>  
     );
 }

@@ -144,14 +144,14 @@ h4 {
   list-style-type: none;
   color: white;
   position: absolute;
-  top: 7%;
+  top: 4%;
   right: 5%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .navbar li {
   cursor: pointer;
-  margin-right: 40px;
+  margin: 0 40px 0 0;
   padding-top: 1%;
 }
 
@@ -598,10 +598,6 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.portfolio .inner_portfolio #todoList {
-  background-image: url("../../Resources/todo_compressed.gif");
 }
 
 .portfolio .inner_portfolio #colorGame {

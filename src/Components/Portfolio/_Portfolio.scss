@@ -7,7 +7,6 @@
     }
     .inner_portfolio{
         @include flexLayout($justifyContent: space-evenly);
-        #todoList{ background-image:url("../../Resources/todo_compressed.gif"); }
         #colorGame{ background-image:url("../../Resources/colorGame_compressed.gif"); }
         #memoryGameWrap{ width:490px; }
         #memoryGame{
