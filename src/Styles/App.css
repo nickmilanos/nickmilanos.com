@@ -230,8 +230,8 @@ h4 {
 }
 
 .hero_image {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../Resources/newhero.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../Resources/newhero.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/newhero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/newhero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -294,8 +294,8 @@ h4 {
 
 @media (max-width: 768px) {
   .hero_image {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../Resources/heromobile.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../Resources/heromobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/heromobile.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/heromobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -601,7 +601,7 @@ h4 {
 }
 
 .portfolio .inner_portfolio #colorGame {
-  background-image: url("../../Resources/colorGame_compressed.gif");
+  background-image: url("/colorGame_compressed.gif");
 }
 
 .portfolio .inner_portfolio #memoryGameWrap {
@@ -609,7 +609,7 @@ h4 {
 }
 
 .portfolio .inner_portfolio #memoryGame {
-  background-image: url("../../Resources/memoryGame_compressed.gif");
+  background-image: url("/memoryGame_compressed.gif");
   width: 490px;
 }
 
@@ -641,7 +641,7 @@ h4 {
   width: 100%;
   height: 400px;
   border-radius: 9px;
-  background-image: url("../../Resources/topokat.png");
+  background-image: url("/topokat.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-transition: all .6s;
