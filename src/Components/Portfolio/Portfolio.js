@@ -1,4 +1,5 @@
 import React from 'react';
+import {ProjectReview} from './ProjectPreview/ProjectPreview';
 
 export const Portfolio = () => {
     return(
@@ -6,14 +7,21 @@ export const Portfolio = () => {
                 <h1>Portfolio</h1>
                 <div className="professionalProjects">
                     <h2>Professional Projects</h2>
-                    <div className="topokatImage"></div>
-                    <p>
-                        <span className="projectTitle">Topokat.gr - freelancing project: </span> A professional network for architects, topographers and civil-engineers. Professionals create their personal profile and their information is available to all users who seek 
-                        someone to provide specific services. Users from all over Greece have the ability to search for a professional by location or by service.<br />
-                        <span className="projectTitle">Future features:</span> A knowledgebase for all users to educate themselves
-                        on various topics and services of the domain of constructions, and more.
-                    </p>
-                    <a className="regularButton visitDemoButton" href="https://www.nmtest1.com" target="_blank" rel="noopener noreferrer">View Demo</a>
+					<div className="projectPreview2">
+						<div className="gremshinovaImage"></div>
+						<p>
+							<span className="projectTitle">Gremshinova.gr: </span> Presentational website for a small technical renovation office.
+						</p>
+						<div className="projectPreviewButtonWrapper"><span></span><a className="regularButton visitDemoButton" href="https://www.gremshinova.gr" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
+					</div>
+					<div className="projectPreview2">
+						<div className="topokatImage"></div>
+						<p>
+							<span className="projectTitle">Topokat.gr: </span> Professional network for architects, topographers and civil-engineers. Professionals create their profile and potential clients from all over Greece are able to search for a professional near them, by location or by service.<br />
+						</p>
+						<div className="projectPreviewButtonWrapper"><span></span><a className="regularButton visitDemoButton" href="https://www.nmtest1.com" target="_blank" rel="noopener noreferrer">View Demo</a></div>
+					</div>
+					{/* <ProjectReview /> */}
                 </div>
                 <div className="otherProjects">
                     <h2>Other Projects</h2>
@@ -23,12 +31,6 @@ export const Portfolio = () => {
                             <div id="memoryGame" className="projects"></div>
                             <p><span className="technologiesUsed">Technologies used:</span> C#, Object-Oriented Programming principles</p>
                             <a className="regularButton" href="https://github.com/nickmilanos/Memory-Game" target="_blank" rel="noopener noreferrer">Github Repository</a>
-                        </div>
-                        <div className="projectWraps">
-                            <h4>Color Game</h4>
-                            <div id="colorGame" className="projects"></div>
-                            <p><span className="technologiesUsed">Technologies used:</span> HTML, CSS, JavaScript</p>
-                            <a className="regularButton" href="https://github.com/nickmilanos/Color-Game" target="_blank" rel="noopener noreferrer">Github Repository</a>
                         </div>
                     </div>
                 </div>

@@ -504,6 +504,10 @@ h4 {
   }
 }
 
+.skills h2 {
+  margin-bottom: 50px !important;
+}
+
 .skills #languages {
   line-height: 29px;
   text-align: left;
@@ -525,9 +529,9 @@ h4 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -538,27 +542,42 @@ h4 {
   margin: 20px auto 0 auto;
 }
 
-.skills .techAndToolsContainer .tech {
-  margin-right: 80px;
-}
-
 .skills .techAndToolsContainer div {
   text-align: left;
-  width: 330px;
 }
 
 .skills .techAndToolsContainer ul {
   list-style: none;
   padding-left: 0;
+  line-height: 1.6em;
 }
 
 .skills .techAndToolsContainer ul li {
   padding: 7px;
+  margin: 15px 0;
+  -webkit-transition: background-color 0.1s, font-weight 0.1s;
+  transition: background-color 0.1s, font-weight 0.1s;
 }
 
 .skills .techAndToolsContainer ul li:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background-color: rgba(0, 0, 0, 0.06);
   font-weight: 400;
+}
+
+.skills .techAndToolsContainer ul li .techIcon, .skills .techAndToolsContainer ul li .toolIcon {
+  font-size: 1.4em;
+  text-align: center;
+  display: inline-block;
+  width: 30px;
+}
+
+.skills .techAndToolsContainer ul li .techName, .skills .techAndToolsContainer ul li .toolName {
+  margin-left: 15px;
+}
+
+.skills .techAndToolsContainer ul li .techExtras, .skills .techAndToolsContainer ul li .toolExtras {
+  font-weight: 300;
+  font-size: 0.9em;
 }
 
 @media (max-width: 1389px) {
@@ -600,10 +619,6 @@ h4 {
           flex-direction: row;
 }
 
-.portfolio .inner_portfolio #colorGame {
-  background-image: url("/colorGame_compressed.gif");
-}
-
 .portfolio .inner_portfolio #memoryGameWrap {
   width: 490px;
 }
@@ -637,15 +652,22 @@ h4 {
   text-align: left;
 }
 
-.portfolio .professionalProjects .topokatImage {
+.portfolio .professionalProjects .topokatImage, .portfolio .professionalProjects .gremshinovaImage {
   width: 100%;
   height: 400px;
   border-radius: 9px;
-  background-image: url("/topokat.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-transition: all .6s;
   transition: all .6s;
+}
+
+.portfolio .professionalProjects .topokatImage {
+  background-image: url("/topokat2.png");
+}
+
+.portfolio .professionalProjects .gremshinovaImage {
+  background-image: url("/gremshinova.png");
 }
 
 .portfolio .professionalProjects .visitDemoButton, .portfolio .professionalProjects p {
@@ -655,6 +677,28 @@ h4 {
 .portfolio .professionalProjects .projectTitle {
   font-weight: 400;
   margin-right: 10px;
+}
+
+.portfolio .professionalProjects .projectPreview2 {
+  margin-bottom: 150px;
+}
+
+.portfolio .professionalProjects .projectPreview2 .projectPreviewButtonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .technologiesUsed {
@@ -690,6 +734,55 @@ h4 {
   .inner_portfolio #memoryGame {
     width: 100% !important;
   }
+}
+
+.projectPreview {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  margin-top: 100px;
+}
+
+.projectPreview .projectPreviewMainSection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 9px;
+  height: 100%;
+  width: 80%;
+}
+
+.projectPreview .projectPreviewMainSection .projectPreviewMainSectionInner {
+  width: 55%;
+  position: absolute;
+  right: 0;
+}
+
+.projectPreview .projectPreviewMainSection .projectPreviewMainSectionInner h2 {
+  margin-bottom: 0;
+}
+
+.projectPreview .projectPreviewMainSection .projectPreviewMainSectionInner p {
+  margin-right: 25px;
+  font-size: 0.9em;
+}
+
+.projectPreview .projectPreviewOverlappingSection {
+  background-image: url("/topokat.jpg");
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 9px;
+  height: 85%;
+  width: 50%;
 }
 
 .contact {

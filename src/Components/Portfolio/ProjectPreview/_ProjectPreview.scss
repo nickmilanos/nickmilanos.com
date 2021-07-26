@@ -1,0 +1,40 @@
+.projectPreview{
+	position: relative;
+	height: 500px;
+	width: 500px;
+	// background-color: #F3EFE0;
+	margin-top: 100px;
+	.projectPreviewMainSection{
+		position: absolute;
+		top: 0; right: 0;
+		padding-right: 70px;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: $borderRadius;
+		height: 100%;
+		width: 80%;
+		.projectPreviewMainSectionInner{
+			width: 55%;
+			position: absolute;
+			right: 0;
+			h2{
+				margin-bottom: 0;
+			}
+			p{
+				margin-right: 25px;
+				font-size: 0.9em;
+			}
+		}
+	}
+	.projectPreviewOverlappingSection{
+		background-image: url("/topokat.jpg");
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+		position: absolute;
+		z-index: 3;
+		top: 50%; left: 0;
+		transform: translateY(-50%);
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: $borderRadius;
+		height: 85%;
+		width: 50%;
+	}
+}

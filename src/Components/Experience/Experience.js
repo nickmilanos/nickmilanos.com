@@ -7,7 +7,7 @@ export const Experience = () => {
             <div className="eduexp">
                 <h2>Education</h2>
                 <div className="expSection">
-                    <span className="expSectionHeader"><span className="boldPart">University of Piraeus</span> (last semester)</span><br />
+                    <span className="expSectionHeader"><span className="boldPart">University of Piraeus</span></span><br />
                     <span className="expSecondarySectionHeader">Department of Informatics - Technology of Software and Intelligent Systems direction</span>
                     <p className="eduExpDetails">
                         Technologies taught: C#, Java, basics of web developmeuunt(HTML, CSS, Javascript), OOP, Machine Learning Algorithms, A.I concepts, Multimedia(compression/decompression algorithms), Unity3D, Android Development and more.<br />

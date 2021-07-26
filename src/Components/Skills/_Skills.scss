@@ -1,4 +1,5 @@
 .skills{
+	h2{ margin-bottom: 50px !important; }
     #languages{
         line-height: $lineHeight;
         text-align:left;
@@ -13,30 +14,44 @@
         }
     }
     .techAndToolsContainer{
-        @include flexLayout($justifyContent: start);
+        @include flexLayout($justifyContent: space-between);
         margin:20px auto 0 auto;
-        .tech{ margin-right: 80px; }
         div{
             text-align:left;
-            width:330px;
         }
         ul{
             list-style:none;
             padding-left:0;
+			line-height: 1.6em;
             li{
                 padding: 7px;
+				margin: 15px 0;
+				transition: background-color 0.1s, font-weight 0.1s;
                 &:hover{
-                    background: rgba(0, 0, 0, 0.06);
+                    background-color: rgba(0, 0, 0, 0.06);
                     font-weight: 400;
                 }
+				.techIcon, .toolIcon{
+					font-size: 1.4em;
+					text-align: center;
+					display: inline-block;
+					width: 30px;
+				}
+				.techName, .toolName{
+					margin-left: 15px;
+				}
+				.techExtras, .toolExtras{
+					font-weight: 300;
+					font-size: 0.9em;
+				}
             }
         }
     }
     @media (max-width:1389px){
-    .tools{
-            text-align:left;
-            width:330px;
-            border-top:1px solid rgba(194,91,86, 0.4);
-        }
+		.tools{
+				text-align:left;
+				width:330px;
+				border-top:1px solid rgba(194,91,86, 0.4);
+		}
     }
 }

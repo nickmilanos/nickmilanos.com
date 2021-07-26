@@ -20,7 +20,7 @@ export const AboutMe = () => {
                     <span className="infoHeader">Name</span>
                     <span className="infoElement">Nick Milanos</span>
                     <span className="infoHeader">Age</span>
-                    <span className="infoElement">29 years</span>
+                    <span className="infoElement">30 years</span>
                     <span className="infoHeader">Location</span>
                     <span className="infoElement">Korydallos, Athens, Greece<a href="https://www.google.gr/maps/place/%CE%9A%CE%BF%CF%81%CF%85%CE%B4%CE%B1%CE%BB%CE%BB%CF%8C%CF%82/@37.9868148,23.6318729,14z/data=!3m1!4b1!4m5!3m4!1s0x14a1bb6c6e9ae079:0x3428b0c49e5a6363!8m2!3d37.9845574!4d23.6478138" target="_blank" rel="noopener noreferrer"><i className="fas fa-map-marker-alt"></i></a></span>
                     <span className="infoHeader">Marital Status</span>
