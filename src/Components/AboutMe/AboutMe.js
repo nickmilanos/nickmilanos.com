@@ -14,7 +14,6 @@ export const AboutMe = () => {
                         I consider myself an adaptive programmer, ready and willing to learn any technology.
                     </p>
                 </div>
-                <img id="myphoto" src="/myphoto_resized.jpg" alt="Nick Milanos"/>
                 <div className="personalInfo">
                     <h2>Personal Info</h2>
                     <span className="infoHeader">Name</span>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContactSection } from './ContactSection/ContactSection';
 
 export const Contact = () => {
     return(
@@ -15,10 +16,10 @@ export const Contact = () => {
                     </p>
                 </div>
                 <div className="contacts">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nick-milanos-879517177/"><i className="fab fa-linkedin fa-2x"></i></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/nickmilanos"><i className="fab fa-github fa-2x"></i></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nikos.milan"><i className="fab fa-facebook-square fa-2x"></i></a>
-                    <a href="mailto:nickmilanos@hotmail.com"><i className="fas fa-at fa-2x"></i></a>
+					<ContactSection icon="fab fa-linkedin fa-2x" link="https://www.linkedin.com/in/nick-milanos-879517177/" linkText="Linkedin Profile" text=""/>
+					<ContactSection icon="fab fa-github fa-2x" link="https://github.com/nickmilanos" linkText="Github Account" text=""/>
+					<ContactSection icon="fab fa-facebook-square fa-2x" link="https://www.facebook.com/nikos.milan" linkText="Facebook Account" text=""/>
+					<ContactSection icon="fas fa-at fa-2x" link="mailto:nickmilanos@hotmail.com" linkText="Message Me" text=""/>
                 </div>
             </div>
         </div>

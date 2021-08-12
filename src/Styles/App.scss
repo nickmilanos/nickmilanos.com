@@ -2,6 +2,11 @@ $primaryColor: #C25B56;
 $secondaryTextColor: white;
 $borderRadius: 9px;
 $lineHeight: 29px;
+
+$lightLinearGradient: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+$defaultLinearGradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+$darkLinearGradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
 $primaryTextShadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
                     0px 8px 13px rgba(0, 0, 0, 0.1),
                     0px 18px 23px rgba(0, 0, 0, 0.1);
@@ -64,26 +69,6 @@ h4 {
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
-}
-
-.regularButton{
-    @include flexLayout($display: inline-flex, $wrap: nowrap, $alignItems: center);
-        transition:background-color 0.2s;
-        &:-moz-focus-inner{ border:0; }
-        font-size: 1.02em;
-        border: none;
-        border-radius: 5px;
-        height: 48px;
-        width: 125px;
-        background-color: $primaryColor;
-        text-decoration: none !important;
-        color: white !important;
-        &:hover{
-            text-decoration: none;
-            background-color: white; 
-            border: 1px solid $primaryColor;
-            color: $primaryColor !important;
-        }
 }
 
 .invisible{opacity: 0;}

@@ -8,25 +8,8 @@
             color: #F3EFE0;
         }
         .contacts{
-            @include flexLayout($justifyContent: space-between);
+            @include flexLayout($justifyContent: center);
             margin-top: 60px;
-            font-size:0.7em;
-            width:16%;
-            min-width: 160px;
-            a{
-                text-decoration:none;
-                color:rgb(158, 161, 181);
-                transition: transform 0.1s ease-in;
-                &:hover{
-                    color:$secondaryTextColor;
-                    cursor:pointer;
-                    transform: scale(1.4);
-                }
-            }
-            .fab, .fa-at{
-                color:$secondaryTextColor;
-                border-radius:12%;
-            }
         }
     }
 }
@@ -50,3 +33,5 @@
     }
 
 }
+
+@import './ContactSection/ContactSection';

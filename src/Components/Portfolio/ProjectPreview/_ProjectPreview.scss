@@ -1,40 +1,67 @@
 .projectPreview{
 	position: relative;
-	height: 500px;
-	width: 500px;
-	// background-color: #F3EFE0;
+	width: 100%; height: 500px;
 	margin-top: 100px;
+	.projectPreviewMainSectionInner, .projectPreviewOverlappingSection{
+		height: 85%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 	.projectPreviewMainSection{
 		position: absolute;
 		top: 0; right: 0;
-		padding-right: 70px;
 		border: 1px solid rgba(0, 0, 0, 0.2);
 		border-radius: $borderRadius;
-		height: 100%;
-		width: 80%;
+		width: 80%; height: 100%;
 		.projectPreviewMainSectionInner{
+			@include flexLayout($flexDirection: column, $justifyContent: space-between, $alignItems: start);
 			width: 55%;
-			position: absolute;
 			right: 0;
-			h2{
-				margin-bottom: 0;
-			}
-			p{
-				margin-right: 25px;
-				font-size: 0.9em;
+			.memoryGameButton{ text-align: center; }
+			.headerAndDescription{
+				h2{ margin: 0; }
+				p{
+					margin-right: 25px;
+					font-size: 0.9em;
+				}
 			}
 		}
 	}
 	.projectPreviewOverlappingSection{
-		background-image: url("/topokat.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-		position: absolute;
 		z-index: 3;
-		top: 50%; left: 0;
-		transform: translateY(-50%);
 		border: 1px solid rgba(0, 0, 0, 0.2);
 		border-radius: $borderRadius;
-		height: 85%;
 		width: 50%;
+	}
+
+	.topokatOverlappingSection{ background-image: $lightLinearGradient, url("/construction_site.jpg"); }
+	.gremshinovaOverlappingSection{ background-image: $lightLinearGradient, url("/renovation.jpg"); }
+	.memoryGameOverlappingSection{ background-image: $lightLinearGradient, url("/memory.jpg"); }
+
+	@media (min-width: 768px){ width: 500px; }
+}
+
+.visitDemoButton{
+	@include flexLayout($display: inline-flex, $wrap: wrap, $alignItems: center, $justifyContent: center);
+	transition:background-color 0.2s;
+	&:-moz-focus-inner{ border:0; }
+	border: none;
+	border-radius: 5px;
+	width: 125px; height: 48px;
+	background-color: $primaryColor;
+	text-decoration: none;
+	color: white;
+	line-height: normal;
+	font-weight: 300;
+	&:hover{
+		text-decoration: none;
+		background-color: white; 
+		border: 1px solid $primaryColor;
+		color: $primaryColor !important;
 	}
 }
