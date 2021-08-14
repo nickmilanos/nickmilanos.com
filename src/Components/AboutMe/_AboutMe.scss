@@ -5,7 +5,7 @@
         &:hover { text-decoration: underline; }
     }
     #about_me_inner {
-        @include flexLayout($justifyContent: space-between, $alignItems: center);
+        @include flexLayout($justifyContent: center, $alignItems: center);
         margin-bottom: 140px;
         #myphoto {
             width: 200px; height: 200px;
@@ -19,8 +19,9 @@
             }
         }
         .fewWords {
-            text-align: left;
+			text-align: justify;
             width: 290px;
+			margin-right: 50px;
             line-height: $lineHeight;
             @media (max-width: 700px){
                 width: 100%;

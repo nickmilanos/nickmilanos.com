@@ -8,11 +8,8 @@ export const Contact = () => {
             <div id="inner_contact">
                 <div className="epilogue">
                     <p>
-                        Thank you for visiting my website!<br />
-                        I would be glad to know your opinion about my work, listen to tips/ recommendations or
-                        answer to any question about the implementation.
-                        Want to integrate me to your team or assign a project to me?
-                        Feel free to contact me!
+                        Thanks for stopping by!<br />
+                        Feel free to contact me if you have any tips / recommendations, questions or job offers.
                     </p>
                 </div>
                 <div className="contacts">
