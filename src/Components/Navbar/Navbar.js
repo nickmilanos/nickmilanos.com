@@ -1,50 +1,68 @@
-import React, {useState} from 'react';
-import {scrollDown, useWindowDimensions} from '../../UtilityFunctions';
+import React from 'react';
+import {scrollDown} from '../../UtilityFunctions';
 
-export const Navbar = () => {
-    let [isNavbarVisible, setIsNavbarVisible] = useState(false);
-    let {width} = useWindowDimensions();
-    const onClickHandler = () => {
-        setIsNavbarVisible(isNavbarVisible => !isNavbarVisible);
+class Navbar extends React.Component {
+
+	constructor(props){
+		super(props);
+		this.state = {
+			isNavbarVisible: false,
+			width: ""
+		};
+	}
+
+	getWindowDimensions(){
+        const {innerWidth: width, innerHeight: height} = window;
+        return {width, height};
     }
 
-    const clickAboutMeHandler = () => {
-        scrollDown(".about_me");
-        setIsNavbarVisible(false);
+	componentDidMount(){
+		this.setState({width: this.getWindowDimensions()});
+	}
+
+    onClickHandler = () => {
+		this.setState(isNavbarVisible => ({isNavbarVisible: !isNavbarVisible}));
     }
 
-    const clickPortfolioHandler = () => {
+    clickPortfolioHandler = () => {
         scrollDown(".portfolio");
-        setIsNavbarVisible(false);
+		this.setState({isNavbarVisible: false});
     }
 
-    const clickSkillsHandler = () => {
+    clickSkillsHandler = () => {
         scrollDown(".skills");
-        setIsNavbarVisible(false);
+		this.setState({isNavbarVisible: false});
     }
 
-    const clickExperienceHandler = () => {
+    clickExperienceHandler = () => {
         scrollDown(".experience");
-        setIsNavbarVisible(false);
+		this.setState({isNavbarVisible: false});
     } 
 
-    const clickContactHandler = () => {
+    clickContactHandler = () => {
         scrollDown(".contact");
-        setIsNavbarVisible(false);
+		this.setState({isNavbarVisible: false});
     }
 
-    return(
-        <>
-            <ul className={`navbar ${isNavbarVisible && width < 812 ? "navbarVisible" : ""}`}>
-                    <li onClick={clickAboutMeHandler}>About me</li>
-                    <li onClick={clickPortfolioHandler}>Portfolio</li>
-                    <li onClick={clickSkillsHandler}>Skills</li>
-                    <li onClick={clickExperienceHandler}>Experiences</li>
-                    <li onClick={clickContactHandler}>Contact</li>
-            </ul>
-            <div id="burger" onClick={onClickHandler} className={isNavbarVisible && width < 812 ? "burgerWhenNavbarVisible" : ""}>
-                <i className="fa fa-bars"></i>
-            </div>
-        </>
-    );
+	render(){
+
+		return(
+			<div className="navbarWrapper">
+				<div></div>
+				<ul className={`navbar ${this.state.isNavbarVisible && this.state.width < 812 ? "navbarVisible" : ""}`}>
+						<li onClick={this.clickPortfolioHandler}>Portfolio</li>
+						<li onClick={this.clickSkillsHandler}>Skills</li>
+						<li onClick={this.clickExperienceHandler}>Experience</li>
+						<li onClick={this.clickContactHandler}>Contact</li>
+				</ul>
+				<div id="burger" onClick={this.onClickHandler} className={this.state.isNavbarVisible && this.state.width < 812 ? "burgerWhenNavbarVisible" : ""}>
+					<i className="fa fa-bars"></i>
+				</div>
+			</div>
+		);
+
+	}
+
 }
+
+export default Navbar;

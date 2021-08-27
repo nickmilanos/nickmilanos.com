@@ -1,11 +1,6 @@
 .portfolio{
 	padding: 120px 0 70px 0;
     h2{margin-bottom: 60px;}
-    a{
-        color:#74828F;
-        text-decoration:none;
-        &:hover{ text-decoration:underline; }
-    }
     .projects{
         margin-bottom: 150px;
         line-height: $lineHeight;
@@ -18,7 +13,5 @@
 		padding: 120px 12% 70px 12%;
 	}
 }
-
-.findMoreNotice{ margin-top: 70px; }
 
 @import './ProjectPreview/ProjectPreview';

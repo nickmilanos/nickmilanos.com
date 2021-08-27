@@ -4,7 +4,7 @@
         line-height: $lineHeight;
         text-align:left;
         padding-bottom:30px;
-        border-bottom:1px solid rgba(194,91,86, 0.4);
+        border-bottom: $primaryColorBorder;
         .language{
             display: inline-block;
             text-align: right;

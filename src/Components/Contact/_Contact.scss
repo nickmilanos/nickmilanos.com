@@ -1,15 +1,23 @@
 .contact{
-    background:#525564;
+	background-color: $mainGray;
     #inner_contact{
         @include flexLayout($flexDirection: column, $justifyContent: space-between, $alignItems: center);
         .epilogue{
-            font-style: italic;
             line-height: $lineHeight;
-            color: #F3EFE0;
+            color: rgba(0, 0, 0, 1);
         }
         .contacts{
             @include flexLayout($justifyContent: center);
             margin-top: 60px;
+			.contactSectionButton{
+				font-size: 1.2em;
+				color: rgba(0, 0, 0, 1);
+				margin: 0 20px;
+				transition: transform 0.1s;
+				&:hover{
+					transform: scale(1.4);
+				}
+			}
         }
     }
 }
@@ -33,5 +41,3 @@
     }
 
 }
-
-@import './ContactSection/ContactSection';

@@ -1,0 +1,16 @@
+.bottomNavbar{
+	@include flexLayout();
+	list-style-type: none;
+	margin: 0;
+	padding: 80px 0;
+	background-color: rgba(0, 0, 0, 1);
+	color: 	#FEF6EB;
+	li{
+		cursor: pointer;
+		&:not(:last-of-type){
+			border-right: 1px solid #FEF6EB;
+			padding: 0 40px 0 0;
+			margin: 0 40px 0 0;
+		}
+	}
+}

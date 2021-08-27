@@ -31,7 +31,6 @@ export const Portfolio = () => {
 									   buttonText="View Gihub Repository"/>
 					</div>
                 </div>
-                <h4 className="findMoreNotice"><i>Find more of my work at my <a href="https://github.com/nickmilanos" target="_blank" rel="noopener noreferrer">Github Account</a></i></h4>
             </div>
 
     );

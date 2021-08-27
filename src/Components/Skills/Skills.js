@@ -91,22 +91,22 @@ export const Skills = () => {
 			extras: ""
 		},
 		vim: {
-			icon: <i class="far fa-file-code"></i>,
+			icon: <i className="far fa-file-code"></i>,
 			name: "Vim",
 			extras: ""
 		},
 		msvs: {
-			icon: <i class="far fa-file-code"></i>,
+			icon: <i className="far fa-file-code"></i>,
 			name: "Microsoft Visual Studio",
 			extras: ""
 		},
 		vscode: {
-			icon: <i class="far fa-file-code"></i>,
+			icon: <i className="far fa-file-code"></i>,
 			name: "Microsoft Visual Studio Code",
 			extras: ""
 		},
 		intellij: {
-			icon: <i class="far fa-file-code"></i>,
+			icon: <i className="far fa-file-code"></i>,
 			name: "IntelliJ IDEA",
 			extras: ""
 		}

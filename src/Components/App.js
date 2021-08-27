@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import '../Styles/App.scss';
-import {AboutMe} from './AboutMe/AboutMe';
+import BottomNavbar from './BottomNavbar/BottomNavbar';
 import {Contact} from './Contact/Contact';
 import {Experience} from './Experience/Experience';
-import {HeroImage} from './HeroImage/HeroImage';
+import HeroImage from './HeroImage/HeroImage';
 import {Portfolio} from './Portfolio/Portfolio';
 import {Skills} from './Skills/Skills';
 import {UpButton} from './UpButton/UpButton';
@@ -19,15 +19,15 @@ export const App = () =>  {
 
   return (
     <div>
-      <HeroImage />
-      <div className="mainContainer">
-        <AboutMe />
-        <Portfolio />
-        <Skills />
-        <Experience />
-        <Contact />
-      </div>
-      <UpButton visibility={isUpButtonVisible} />
+		<HeroImage />
+		<div className="mainContainer">
+			<Portfolio />
+			<Skills />
+			<Experience />
+			<Contact />
+			<BottomNavbar />
+		</div>
+		<UpButton visibility={isUpButtonVisible} />
     </div>
   );
 }

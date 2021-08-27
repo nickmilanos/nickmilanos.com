@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ProjectReview = ({header, description, link, extraClasses, buttonText, extraButtonClass}) => {
+export const ProjectReview = ({header, description, link, extraClasses, buttonText, extraButtonClass = ""}) => {
 	return(
 		<div className="projectPreview">
 			<div className={`projectPreviewOverlappingSection ${extraClasses}`}></div>

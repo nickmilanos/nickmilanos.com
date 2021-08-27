@@ -3,7 +3,7 @@
         text-align:left;
 		h2{ margin-bottom: 80px; }
         h2:last-of-type{
-            border-top:1px solid rgba(194,91,86, 0.4);
+            border-top: $primaryColorBorder;
             padding-top:150px;
 			margin-top: 150px;
         }

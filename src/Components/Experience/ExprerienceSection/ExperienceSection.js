@@ -5,7 +5,7 @@ export const ExperienceSection = ({header, subHeader, imageSource, fontIconClass
 		<div className="expSection">
 			<div className="eduHeaderSection">
 				{imageSource ? <img src={imageSource} /> : <i className={fontIconClass}></i>}
-				<div class="eduHeaderDescription">
+				<div className="eduHeaderDescription">
 					<span className="expSectionHeader"><strong>{header}</strong></span><br />
 					<span className="expSecondarySectionHeader"><strong>{subHeader}</strong></span>
 				</div>
