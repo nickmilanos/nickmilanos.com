@@ -20,6 +20,10 @@ class HeroImage extends React.Component{
 		this.setState({isTextVisible: true});
 	}
 
+	scrollDownButtonHandler = () => {
+		scrollDown(".portfolio");
+	}
+
 	render(){
 		return(
 			<div className="hero_image">
@@ -42,7 +46,7 @@ class HeroImage extends React.Component{
 								{Object.keys(this.state.personalInfo).map(key => <li key={key}> <span className="infoHeader">{key}</span> <span className="infoElement">{this.state.personalInfo[key]}</span> </li>)}
 							</ul>
 						</div>
-						<div className="seeMoreButton">SCROLL FOR MORE</div>
+						<div className="seeMoreButton btn btn-5" onClick={this.scrollDownButtonHandler}>SCROLL FOR MORE</div>
 					</div>
 				</div>
 					{/* <span onClick={() => scrollDown(".about_me")}><i className="fas fa-angle-double-up fa-2x"></i></span> */}

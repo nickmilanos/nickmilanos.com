@@ -1,27 +1,36 @@
 import React from 'react';
 import {scrollDown} from '../../UtilityFunctions';
 
-const BottomNavbar = () => {
+class BottomNavbar extends React.Component {
 
-    const clickPortfolioHandler = () => {
+    clickPortfolioHandler = () => {
         scrollDown(".portfolio");
     }
 
-    const clickSkillsHandler = () => {
+    clickSkillsHandler = () => {
         scrollDown(".skills");
     }
 
-    const clickExperienceHandler = () => {
+    clickExperienceHandler = () => {
         scrollDown(".experience");
     } 
 
-	return(
-		<ul className="bottomNavbar">
-			<li onClick={clickPortfolioHandler}>PORTFOLIO</li>
-			<li onClick={clickSkillsHandler}>SKILLS</li>
-			<li onClick={clickExperienceHandler}>EXPERIENCE</li>
-		</ul>
-	);
+	clickContactHandler = () => {
+		scrollDown(".contact");
+	}
+
+	render(){
+
+		return(
+			<ul className="bottomNavbar">
+				<li onClick={this.clickPortfolioHandler}>PORTFOLIO</li>
+				<li onClick={this.clickSkillsHandler}>SKILLS</li>
+				<li onClick={this.clickExperienceHandler}>EXPERIENCE</li>
+				<li onClick={this.clickContactHandler}>CONTACT</li>
+			</ul>
+		);
+
+	}
 
 }
 

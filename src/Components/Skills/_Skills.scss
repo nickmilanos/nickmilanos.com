@@ -48,3 +48,46 @@
 		}
     }
 }
+
+.fa-heart-beat{ animation: fa-heart-beat 2s infinite alternate; }
+@keyframes fa-heart-beat{ 100% { transform: scale(1.5); } }
+
+.sass-color{ animation: sass-color 2s infinite alternate; }
+@keyframes sass-color{
+	100% {
+		transform: scale(1.5);
+		color: #cf649a;
+	}
+}
+
+.js-color{ animation: js-color 2s infinite alternate; }
+@keyframes js-color{
+	100% {
+		transform: scale(1.5);
+		color: #f7df1e;
+	}
+}
+
+.react-color{ animation: react-color 2s infinite alternate; }
+@keyframes react-color{
+	100%{
+		transform: scale(1.5);
+		color: #61dafb;
+	}
+}
+
+.css-color{ animation: css-color 2s infinite alternate; }
+@keyframes css-color{
+	100%{
+		transform: scale(1.5);
+		color: #1572b7;
+	}
+}
+
+.ubuntu-color{ animation: ubuntu-color 2s infinite alternate; }
+@keyframes ubuntu-color{
+	100%{
+		transform: scale(1.5);
+		color: #de4816;
+	}
+}

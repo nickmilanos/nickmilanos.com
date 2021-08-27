@@ -8,22 +8,22 @@ export const Skills = () => {
 			extras: ""
 		},
 		CSS3: {
-			icon: <i className="fab fa-css3-alt"></i>,
+			icon: <i className="fab fa-css3-alt css-color"></i>,
 			name: "CSS3",
 			extras: "(+ Flexbox, Media Queries, Animations)"
 		},
 		sass: {
-			icon: <i className="fab fa-sass"></i>,
+			icon: <i className="fab fa-sass sass-color"></i>,
 			name: "Sass",
 			extras: ""
 		},
 		javascript: {
-			icon: <i className="fab fa-js"></i>,
+			icon: <i className="fab fa-js js-color"></i>,
 			name: "JavaScript",
 			extras: "(+ DOM Manipulation, AJAX, JQuery)"
 		},
 		react: {
-			icon: <i className="fab fa-react"></i>,
+			icon: <i className="fab fa-react react-color"></i>,
 			name: "React",
 			extras: "(+ React Router, Redux, Hooks, Functional Components)"
 		},
@@ -56,7 +56,7 @@ export const Skills = () => {
 
 	const tools = {
 		ubuntu: {
-			icon: <i className="fab fa-ubuntu"></i>,
+			icon: <i className="fab fa-ubuntu ubuntu-color"></i>,
 			name: "Linux",
 			extras: "(Ubuntu)"
 		},
@@ -66,17 +66,17 @@ export const Skills = () => {
 			extras: ""
 		},
 		cli: {
-			icon: <i className="fas fa-terminal"></i>,
+			icon: <i className="fas fa-terminal fa-heart-beat"></i>,
 			name: "Command Line Interface",
 			extras: "(Linux Terminal)"
 		},
 		git: {
-			icon: <i className="fas fa-code-branch"></i>,
+			icon: <i className="fas fa-code-branch fa-heart-beat"></i>,
 			name: "Git / Github",
 			extras: ""
 		},
 		firefox: {
-			icon: <i className="fab fa-firefox"></i>,
+			icon: <i className="fab fa-firefox fa-heart-beat"></i>,
 			name: "Mozilla Firefox",
 			extras: ""
 		},
@@ -91,7 +91,7 @@ export const Skills = () => {
 			extras: ""
 		},
 		vim: {
-			icon: <i className="far fa-file-code"></i>,
+			icon: <i className="far fa-file-code fa-heart-beat"></i>,
 			name: "Vim",
 			extras: ""
 		},
@@ -101,7 +101,7 @@ export const Skills = () => {
 			extras: ""
 		},
 		vscode: {
-			icon: <i className="far fa-file-code"></i>,
+			icon: <i className="far fa-file-code fa-heart-beat"></i>,
 			name: "Microsoft Visual Studio Code",
 			extras: ""
 		},
