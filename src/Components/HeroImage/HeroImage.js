@@ -1,3 +1,5 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import React from 'react';
 import { scrollDown } from '../../UtilityFunctions';
 import Navbar from '../Navbar/Navbar';
@@ -8,16 +10,25 @@ class HeroImage extends React.Component{
 		super(props);
 		this.state = {
 			isTextVisible: false,
+			width: window.innerWidth,
 			personalInfo: {
-				Age: `${new Date().getFullYear() - 1991} years`,
-				Location: <a className="location" href="https://www.google.gr/maps/place/%CE%9A%CE%BF%CF%81%CF%85%CE%B4%CE%B1%CE%BB%CE%BB%CF%8C%CF%82/@37.9868148,23.6318729,14z/data=!3m1!4b1!4m5!3m4!1s0x14a1bb6c6e9ae079:0x3428b0c49e5a6363!8m2!3d37.9845574!4d23.6478138" target="_blank" rel="noopener noreferrer">Korydallos, Athens, Greece<i className="fas fa-map-marker-alt"></i></a>,
-				"Military Service": "Fulfilled"
 			}
 		};
 	}
 
 	componentDidMount(){
-		this.setState({isTextVisible: true});
+		this.setState((prevState) => ({
+			isTextVisible: true,
+			personalInfo: {
+				Age: `${new Date().getFullYear() - 1991} years`,
+				Location: prevState.width > 768 ? <a className="location" href="https://www.google.gr/maps/place/%CE%9A%CE%BF%CF%81%CF%85%CE%B4%CE%B1%CE%BB%CE%BB%CF%8C%CF%82/@37.9868148,23.6318729,14z/data=!3m1!4b1!4m5!3m4!1s0x14a1bb6c6e9ae079:0x3428b0c49e5a6363!8m2!3d37.9845574!4d23.6478138" target="_blank" rel="noopener noreferrer">Korydallos, Athens, Greece<i className="fas fa-map-marker-alt"></i></a> : "Korydallos, Athens",
+				"Military Service": "Fulfilled"
+			}
+		}));
+		Aos.init({
+			delay: 500,
+			duration: 1000
+		});
 	}
 
 	scrollDownButtonHandler = () => {
@@ -28,7 +39,7 @@ class HeroImage extends React.Component{
 		return(
 			<div className="hero_image">
 				<Navbar />
-				<div className="heroTextOutter">
+				<div className="heroTextOutter" data-aos="fade-up">
 					<div className={`heroText ${this.state.isTextVisible ? "isVisible" : ""}`}>
 						<h1>Nick Milanos</h1>
 						{/* <p>Junior Web Developer</p> */}

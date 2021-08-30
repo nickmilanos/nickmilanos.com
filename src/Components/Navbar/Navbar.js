@@ -7,21 +7,40 @@ class Navbar extends React.Component {
 		super(props);
 		this.state = {
 			isNavbarVisible: false,
-			width: ""
+			width: "",
+			timeoutId: 0
 		};
 	}
 
-	getWindowDimensions(){
-        const {innerWidth: width, innerHeight: height} = window;
-        return {width, height};
-    }
+	resizeHandler = () => {
+
+		if(this.state.timeoutId) clearTimeout(this.state.timeoutId);
+
+		let newTimeoutId = setTimeout(() => {
+			this.setState({
+				width: window.innerWidth
+			});
+		}, 100);
+
+		this.setState({
+			timeoutId: newTimeoutId
+		});
+
+	}
 
 	componentDidMount(){
-		this.setState({width: this.getWindowDimensions()});
+		window.addEventListener('resize', this.resizeHandler);
+		this.setState({
+			width: window.innerWidth
+		});
+	}
+
+	componentWillUnmount(){
+		window.removeEventListener('resize', this.resizeHandler);
 	}
 
     onClickHandler = () => {
-		this.setState(isNavbarVisible => ({isNavbarVisible: !isNavbarVisible}));
+		this.setState(previousState => ({isNavbarVisible: !previousState.isNavbarVisible}));
     }
 
     clickPortfolioHandler = () => {

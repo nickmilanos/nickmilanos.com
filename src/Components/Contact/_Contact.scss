@@ -2,9 +2,14 @@
 	background-color: $mainGray;
     #inner_contact{
         @include flexLayout($flexDirection: column, $justifyContent: space-between, $alignItems: center);
-        .epilogue{
+        p{
             line-height: $lineHeight;
+			text-align: center;
             color: rgba(0, 0, 0, 1);
+			@media (max-width: 1112px){
+				width:80%;
+				margin-bottom:40px;
+			}
         }
         .contacts{
             @include flexLayout($justifyContent: center);
@@ -18,26 +23,10 @@
 					transform: scale(1.4);
 				}
 			}
+			@media (max-width: 680px){
+				text-align:center;
+				.fab, .fa-at{ margin-right:0; }
+			}
         }
     }
-}
-
-@media (max-width: 1112px){
-    .epilogue{
-        text-align:center;
-        width:80%;
-        margin-bottom:40px;
-    }
-}
-
-@media screen and (max-width: 680px){
-    .contacts{
-        text-align:center;
-        .fab, .fa-at{ margin-right:0; }
-    }
-    .epilogue{
-        border-bottom:1px solid rgba(255,255,255, 0.3);
-        text-align:left;
-    }
-
 }

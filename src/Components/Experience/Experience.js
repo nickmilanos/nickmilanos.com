@@ -1,5 +1,5 @@
 import React from 'react';
-import {ExperienceSection} from './ExprerienceSection/ExperienceSection';
+import ExperienceSection from './ExprerienceSection/ExperienceSection';
 
 export const Experience = () => {
     return(

@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProjectReview} from './ProjectPreview/ProjectPreview';
+import ProjectReview from './ProjectPreview/ProjectPreview';
 
 export const Portfolio = () => {
     return(

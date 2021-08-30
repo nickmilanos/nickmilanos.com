@@ -1,3 +1,5 @@
+$projectPreviewInnerMargin: 25px;
+
 .projectPreview{
 	position: relative;
 	width: 100%; height: 500px;
@@ -46,11 +48,6 @@
 		border-radius: $borderRadius;
 		width: 50%;
 	}
-
-	.topokatOverlappingSection{ background-image: url("/construction_site.jpg"); }
-	.gremshinovaOverlappingSection{ background-image: url("/renovation.jpg"); }
-	.memoryGameOverlappingSection{ background-image: url("/memory.jpg"); }
-
 	@media (min-width: 768px){ width: 500px; }
 }
 
@@ -73,3 +70,41 @@
 		color: $primaryColor !important;
 	}
 }
+
+.projectPreviewMobile{
+	@include flexLayout($justifyContent: center, $flexDirection: column);
+	width: 98%; height: 700px;
+	margin-top: 20px;
+	.projectPreviewMainSection{
+		padding: 0 30px;
+		border: $blackBorder;
+		border-radius: 0 0 $borderRadius $borderRadius;
+		.projectPreviewMainSectionInner{
+			@include flexLayout($justifyContent: space-between, $alignItems: start, $flexDirection: column);
+			.headerAndDescription{
+				h2{ margin: $projectPreviewInnerMargin 0;}
+				p{
+					margin: 0 0 $projectPreviewInnerMargin 0;
+					font-size: 0.9em;
+				}
+			}
+			.visitDemoButton{ margin-bottom: $projectPreviewInnerMargin; }
+			.memoryGameButton{ text-align: center; }
+		}
+	}
+	.projectPreviewOverlappingSection{
+		width: 100%; height: 40%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: filter 0.4s, box-shadow 0.4s;
+		filter: grayscale(100%);
+		z-index: 3;
+		border: 1px solid black;
+		border-radius: $borderRadius $borderRadius 0 0;
+	}
+}
+
+.topokatOverlappingSection{ background-image: url("/construction_site.jpg"); }
+.gremshinovaOverlappingSection{ background-image: url("/renovation.jpg"); }
+.memoryGameOverlappingSection{ background-image: url("/memory.jpg"); }

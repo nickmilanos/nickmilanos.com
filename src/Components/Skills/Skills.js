@@ -66,17 +66,17 @@ export const Skills = () => {
 			extras: ""
 		},
 		cli: {
-			icon: <i className="fas fa-terminal fa-heart-beat"></i>,
+			icon: <i className="fas fa-terminal cli-color"></i>,
 			name: "Command Line Interface",
 			extras: "(Linux Terminal)"
 		},
 		git: {
-			icon: <i className="fas fa-code-branch fa-heart-beat"></i>,
+			icon: <i className="fas fa-code-branch git-color"></i>,
 			name: "Git / Github",
 			extras: ""
 		},
 		firefox: {
-			icon: <i className="fab fa-firefox fa-heart-beat"></i>,
+			icon: <i className="fab fa-firefox firefox-color"></i>,
 			name: "Mozilla Firefox",
 			extras: ""
 		},
@@ -91,7 +91,7 @@ export const Skills = () => {
 			extras: ""
 		},
 		vim: {
-			icon: <i className="far fa-file-code fa-heart-beat"></i>,
+			icon: <i className="far fa-file-code text-editor-color"></i>,
 			name: "Vim",
 			extras: ""
 		},
@@ -101,7 +101,7 @@ export const Skills = () => {
 			extras: ""
 		},
 		vscode: {
-			icon: <i className="far fa-file-code fa-heart-beat"></i>,
+			icon: <i className="far fa-file-code text-editor-color"></i>,
 			name: "Microsoft Visual Studio Code",
 			extras: ""
 		},

@@ -48,7 +48,7 @@ html, body{
     text-align: center;
     padding: 120px 22% 70px 22%;
     &:nth-of-type(odd){ background-color: white; }
-    @media (max-width: 700px) { padding: 120px 5% 70px 5%; }
+    @media (max-width: 700px) { padding: 90px 5% 70px 5%; }
 }
 
 h1, h2, h4{

@@ -49,45 +49,35 @@
     }
 }
 
-.fa-heart-beat{ animation: fa-heart-beat 2s infinite alternate; }
-@keyframes fa-heart-beat{ 100% { transform: scale(1.5); } }
+@mixin coloredHeartBeat($animationName){
+	animation: $animationName 2s infinite alternate;
+}
 
-.sass-color{ animation: sass-color 2s infinite alternate; }
-@keyframes sass-color{
-	100% {
-		transform: scale(1.5);
-		color: #cf649a;
+.sass-color{ @include coloredHeartBeat(sass-color); }
+.js-color{ @include coloredHeartBeat(js-color); }
+.react-color{ @include coloredHeartBeat(react-color); }
+.css-color{ @include coloredHeartBeat(css-color); }
+.ubuntu-color{ @include coloredHeartBeat(ubuntu-color); }
+.git-color{ @include coloredHeartBeat(git-color); }
+.text-editor-color{ @include coloredHeartBeat(text-editor-color); }
+.firefox-color{ @include coloredHeartBeat(firefox-color); }
+.cli-color{ @include coloredHeartBeat(cli-color); }
+
+@mixin coloredHeartBeatAnimation($name, $color){
+	@keyframes #{$name}{
+		100%{
+			transform: scale(1.4);
+			color: $color;
+		}
 	}
 }
 
-.js-color{ animation: js-color 2s infinite alternate; }
-@keyframes js-color{
-	100% {
-		transform: scale(1.5);
-		color: #f7df1e;
-	}
-}
-
-.react-color{ animation: react-color 2s infinite alternate; }
-@keyframes react-color{
-	100%{
-		transform: scale(1.5);
-		color: #61dafb;
-	}
-}
-
-.css-color{ animation: css-color 2s infinite alternate; }
-@keyframes css-color{
-	100%{
-		transform: scale(1.5);
-		color: #1572b7;
-	}
-}
-
-.ubuntu-color{ animation: ubuntu-color 2s infinite alternate; }
-@keyframes ubuntu-color{
-	100%{
-		transform: scale(1.5);
-		color: #de4816;
-	}
-}
+@include coloredHeartBeatAnimation(cli-color, #04fe00);
+@include coloredHeartBeatAnimation(firefox-color, #ff4140);
+@include coloredHeartBeatAnimation(text-editor-color, #4ab1f3);
+@include coloredHeartBeatAnimation(git-color, #f05133);
+@include coloredHeartBeatAnimation(ubuntu-color, #de4816);
+@include coloredHeartBeatAnimation(css-color, #1572b7);
+@include coloredHeartBeatAnimation(react-color, #61dafb);
+@include coloredHeartBeatAnimation(js-color, #f7df1e);
+@include coloredHeartBeatAnimation(sass-color, #cf649a);
