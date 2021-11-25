@@ -39,7 +39,8 @@ html, body{
 .mainContainer {
     position: absolute;
 	width: 100%;
-    top: 100%;
+    top: 100%; left: 0; right: 0;
+	margin: auto;
     background: $mainGray;
     @media (max-width: 700px){ width: 99%; }
 }

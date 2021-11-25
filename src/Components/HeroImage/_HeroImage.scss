@@ -93,6 +93,23 @@ $heroTextMargin: 37px;
 						width: auto;
 					}
 				}
+				.infoListAndSocialMedia{
+					@include flexLayout($justifyContent: space-between, $alignItems: center);
+					.socialMedia{
+						@include flexLayout($justifyContent: space-between, $flexDirection: column);
+						margin-left: 60px;
+						.socialMediaIcon{
+							color: white;
+							text-shadow: $primaryTextShadow;
+							transition: transform .1s;
+							&:not(:last-of-type){ margin-bottom: 15px; }
+							&:hover{
+								transform: scale(1.4);
+							}
+
+						}
+					}
+				}
 				@media (min-width: 768px){
 					margin-right: 70px;
 				}

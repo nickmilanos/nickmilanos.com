@@ -4,7 +4,7 @@ import ExperienceSection from './ExprerienceSection/ExperienceSection';
 export const Experience = () => {
     return(
         <div className="experience mainSection">
-            <h1>Experiences</h1>
+            <h1>Experience</h1>
             <div className="eduexp">
                 <h2>Professional Experience</h2>
 				<ExperienceSection header="Freelancing (Sept 2020 - Present)"

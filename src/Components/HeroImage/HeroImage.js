@@ -42,20 +42,29 @@ class HeroImage extends React.Component{
 				<div className="heroTextOutter" data-aos="fade-up">
 					<div className={`heroText ${this.state.isTextVisible ? "isVisible" : ""}`}>
 						<h1>Nick Milanos</h1>
-						{/* <p>Junior Web Developer</p> */}
 					</div>
 					<div className="heroDescriptionAndSeeMoreButton">
 						<div className="heroDescription">
 							<p className="fewWords">
-								I am always trying to develop quality, readable and efficient code, regardless of the technologies used.
-								Paying attention to details is of great importance in order to deliver top quality software.
-								I am able to responsibly follow orders and complete tasks on time.
-								I enjoy working on my own and as part of a team.
-								I consider myself an adaptive programmer, ready and willing to learn any technology.
+								Junior Web Developer, always trying to create readable and efficient code.
+								I enjoy creating eye-catching, intuitive UIs as much as getting involved with backend code and business logic.
+								I have worked both as a member of a team and as an individual freelancer and enjoyed both a lot.
+								Curious with new technologies, i try to learn something new everyday or master something i already know.
 							</p>
+							{this.state.width > 768 ? <div className="infoListAndSocialMedia">
 							<ul>
 								{Object.keys(this.state.personalInfo).map(key => <li key={key}> <span className="infoHeader">{key}</span> <span className="infoElement">{this.state.personalInfo[key]}</span> </li>)}
 							</ul>
+							<div className="socialMedia">
+								<a className="socialMediaIcon" href="https://www.linkedin.com/in/nick-milanos-879517177/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fa-2x"></i></a>
+								<a className="socialMediaIcon" href="https://github.com/nickmilanos" target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-2x"></i></a>
+								<a className="socialMediaIcon" href="https://www.facebook.com/nikos.milan" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square fa-2x"></i></a>
+								<a className="socialMediaIcon" href="mailto:nickmilanos@hotmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-at fa-2x"></i></a>
+							</div>
+							</div> : 
+							<ul>
+								{Object.keys(this.state.personalInfo).map(key => <li key={key}> <span className="infoHeader">{key}</span> <span className="infoElement">{this.state.personalInfo[key]}</span> </li>)}
+							</ul> }
 						</div>
 						<div className="seeMoreButton btn btn-5" onClick={this.scrollDownButtonHandler}>SCROLL FOR MORE</div>
 					</div>
