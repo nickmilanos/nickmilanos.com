@@ -1,0 +1,51 @@
+.skills{
+	h2{ margin-bottom: 50px !important; }
+    #languages{
+        line-height: $lineHeight;
+        text-align:left;
+        padding-bottom:30px;
+        border-bottom: $primaryColorBorder;
+        .language{
+            display: inline-block;
+            text-align: right;
+            font-weight: 400;
+            width: 50px;
+            margin-right: 20px;
+        }
+    }
+    .techAndToolsContainer{
+        @include flexLayout($justifyContent: space-between);
+        margin:20px auto 0 auto;
+        div{ text-align:left; }
+        ul{
+            list-style:none;
+            padding-left:0;
+			line-height: 1.6em;
+            li{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+                padding: 9px;
+				margin: 15px 0;
+                &:hover{ background-color: rgba(0, 0, 0, 0.06); }
+				.techName, .toolName{ margin-left: 15px; }
+				.techExtras, .toolExtras{
+					font-weight: 300;
+					font-size: 0.9em;
+				}
+				.techIconInner, .toolIconInner{
+					width: 27px; height: 27px;
+					text-align: center;
+					display: inline-block;
+				}
+            }
+        }
+    }
+    @media (max-width:1389px){
+		.tools{
+			text-align:left;
+			width:330px;
+			border-top:1px solid rgba(194,91,86, 0.4);
+		}
+    }
+}

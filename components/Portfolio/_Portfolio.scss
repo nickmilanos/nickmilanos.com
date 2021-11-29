@@ -1,0 +1,19 @@
+.portfolio{
+	padding-bottom: 70px;
+    h2{
+		margin-bottom: 0;
+		@media (min-width: 768px){
+			margin-bottom: 60px;
+		}
+	}
+    .projects{
+        margin-bottom: 150px;
+        line-height: $lineHeight;
+        text-align: left;
+        p{ margin-top: 30px; }
+		.professionalProjectsInnerWrapper, .otherProjectsInnerWrapper{ @include flexLayout($justifyContent: space-evenly); }
+    }
+	@media (min-width: 768px){ padding: 120px 12% 70px 12%; }
+}
+
+@import './ProjectPreview/ProjectPreview';

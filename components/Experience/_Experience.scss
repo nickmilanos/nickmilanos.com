@@ -1,0 +1,16 @@
+.experience{
+    .eduexp{
+        text-align:left;
+		h2{ margin-bottom: 80px; }
+        h2:last-of-type{
+            border-top: $primaryColorBorder;
+            padding-top:150px;
+			margin-top: 150px;
+        }
+    }
+    @media (max-width:702px){
+        #eduexp{ width:80%; }
+    }
+}
+
+@import './ExprerienceSection/ExperienceSection';
