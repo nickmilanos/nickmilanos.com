@@ -1,5 +1,5 @@
 import React from 'react';
-import {moveToTop} from '../../UtilityFunctions';
+import {moveToTop} from '../../UtilityFunctions.ts';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleDoubleUp} from '@fortawesome/free-solid-svg-icons';
 

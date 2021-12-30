@@ -8,11 +8,6 @@ export const Portfolio = () => {
                 <div className="projects">
                     <h2>Professional Projects</h2>
 					<div className="professionalProjectsInnerWrapper">
-						<ProjectReview header="Gremshinova.gr"
-								       description="Presentational website for a small technical renovation office."
-									   link="https://www.gremshinova.gr"
-									   extraClasses="gremshinovaOverlappingSection"
-									   buttonText="Visit Website" />
 						<ProjectReview header="Topokat.gr"
 									   description="Professional network for architects, topographers and civil-engineers. Professionals create their profile and potential clients from all over Greece are able to search for a professional near them, by location or by service."
 									   link="https://www.topokat.gr"

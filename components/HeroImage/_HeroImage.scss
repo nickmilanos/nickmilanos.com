@@ -49,7 +49,7 @@ $heroTextMargin: 37px;
 					margin-top: 0;
 					margin-bottom: $heroTextMargin;
 					text-align: justify;
-					@media (min-width: 768px){
+					@media (min-width: 862px){
 						width: 60%;
 						font-size: 1em;
 						margin: 0;
@@ -83,7 +83,7 @@ $heroTextMargin: 37px;
 							&:not(:last-of-type){ margin-bottom: 20px; }
 						}
 					}
-					@media (min-width: 768px){
+					@media (min-width: 855px){
 						display: block;
 						text-align: right;
 						width: auto;

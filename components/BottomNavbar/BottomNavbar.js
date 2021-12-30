@@ -1,5 +1,5 @@
 import React from 'react';
-import {scrollDown} from '../../UtilityFunctions';
+import {scrollDown} from '../../UtilityFunctions.ts';
 
 class BottomNavbar extends React.Component {
 

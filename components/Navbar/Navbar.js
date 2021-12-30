@@ -1,7 +1,7 @@
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
-import {scrollDown} from '../../UtilityFunctions';
+import {scrollDown} from '../../UtilityFunctions.ts';
 
 class Navbar extends React.Component {
 

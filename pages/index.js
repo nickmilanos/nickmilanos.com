@@ -12,7 +12,7 @@ const Home = () => {
 	let [isUpButtonVisible, setIsupButtonVisible] = useState(false);
 
 	useEffect(() => {
-		if(typeof window !== undefined){
+		if(typeof window !== undefined && window.innerWidth > 768){
 			window.addEventListener('scroll', () => {
 				setIsupButtonVisible(document.documentElement.scrollTop !== 0);
 			});

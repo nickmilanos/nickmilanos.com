@@ -364,7 +364,7 @@ h4 {
   text-align: justify;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 862px) {
   .hero_image .heroTextOutter .heroDescriptionAndSeeMoreButton .heroDescription .fewWords {
     width: 60%;
     font-size: 1em;
@@ -429,7 +429,7 @@ h4 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 855px) {
   .hero_image .heroTextOutter .heroDescriptionAndSeeMoreButton .heroDescription ul {
     display: block;
     text-align: right;

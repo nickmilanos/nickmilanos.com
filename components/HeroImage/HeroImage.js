@@ -1,28 +1,20 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect, useState } from 'react';
-import { scrollDown } from '../../UtilityFunctions';
+import { scrollDown } from '../../UtilityFunctions.ts';
 import Navbar from '../Navbar/Navbar';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faFacebookSquare} from '@fortawesome/free-brands-svg-icons';
-import {faAt} from '@fortawesome/free-solid-svg-icons';
+import SocialMediaIconsSchema from './SocialMediaIconsSchema';
+import PersonalInfoSchema from './PersonalInfoSchema';
 
 const HeroImage = ({}) => {
 
 	let [isTextVisible, setIsTextVisible] = useState(false);
 	let [width, setWidth] = useState("");
-	let [personalInfo, setPersonalInfo] = useState({});
 
 	useEffect(() => {
 		setIsTextVisible(true);
 		setWidth(typeof window !== undefined ? window.innerWidth : "");
-		setPersonalInfo({
-			Age: `${new Date().getFullYear() - 1991} years`,
-			Location: width > 768 ? <a className="location" href="https://www.google.gr/maps/place/%CE%9A%CE%BF%CF%81%CF%85%CE%B4%CE%B1%CE%BB%CE%BB%CF%8C%CF%82/@37.9868148,23.6318729,14z/data=!3m1!4b1!4m5!3m4!1s0x14a1bb6c6e9ae079:0x3428b0c49e5a6363!8m2!3d37.9845574!4d23.6478138" target="_blank" rel="noopener noreferrer">Korydallos, Athens, Greece</a> : "Korydallos, Athens",
-			"Military Service": "Fulfilled"
-		});
 		Aos.init({
 			delay: 500,
 			duration: 1000
@@ -50,17 +42,16 @@ const HeroImage = ({}) => {
 						</p>
 						{width > 768 ? <div className="infoListAndSocialMedia">
 						<ul>
-							{Object.keys(personalInfo).map(key => <li key={key}> <span className="infoHeader">{key}</span> <span className="infoElement">{personalInfo[key]}</span> </li>)}
+							{PersonalInfoSchema().map(item => <li key={item}> <span className="infoHeader">{item.header}</span> <span className="infoElement">{item.content}</span> </li>)}
 						</ul>
 						<div className="socialMedia">
-							<a className="socialMediaIcon" href="https://www.linkedin.com/in/nick-milanos-879517177/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin}/></a>
-							<a className="socialMediaIcon" href="https://github.com/nickmilanos" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
-							<a className="socialMediaIcon" href="https://www.facebook.com/nikos.milan" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookSquare} /></a>
-							<a className="socialMediaIcon" href="mailto:nickmilanos@hotmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faAt} /></a>
+							{
+								SocialMediaIconsSchema().map(item => <a className="socialMediaIcon" href={item.link} target="_blank" rel="noopener noreferrer" key={item.link}><FontAwesomeIcon icon={item.icon}/></a>)
+							}
 						</div>
 						</div> : 
 						<ul>
-							{Object.keys(personalInfo).map(key => <li key={key}> <span className="infoHeader">{key}</span> <span className="infoElement">{personalInfo[key]}</span> </li>)}
+							{PersonalInfoSchema().map(item => <li key={item}> <span className="infoHeader">{item.header}</span> <span className="infoElement">{item.content}</span> </li>)}
 						</ul> }
 					</div>
 					<div className="seeMoreButton btn btn-5" onClick={scrollDownButtonHandler}>SCROLL FOR MORE</div>
