@@ -14,7 +14,7 @@
         }
     }
     .techAndToolsContainer{
-        @include flexLayout($justifyContent: space-between);
+        @include flexLayout($flexDirection: column, $justifyContent: space-between);
         margin:20px auto 0 auto;
         div{ text-align:left; }
         ul{
@@ -26,12 +26,12 @@
                 padding: 9px;
 				margin: 15px 0;
                 &:hover{ background-color: rgba(0, 0, 0, 0.06); }
-				.techName, .toolName{ margin-left: 15px; }
-				.techExtras, .toolExtras{
+				.techName{ margin-left: 15px; }
+				.techExtras{
 					font-weight: 300;
 					font-size: 0.9em;
 				}
-				.techIconInner, .toolIconInner{
+				.techIconInner{
 					width: 27px; height: 27px;
 					text-align: center;
 					display: inline-block;
@@ -39,11 +39,48 @@
             }
         }
     }
-    @media (max-width:1389px){
-		.tools{
-			text-align:left;
-			width:330px;
-			border-top:1px solid rgba(194,91,86, 0.4);
+}
+
+.techAndToolsContainer2{
+	@include flexLayout($flexDirection: column, $justifyContent: space-evenly, $alignItems: flex-start);
+	padding-top: 70px;
+	.skillsSection{
+		@include flexLayout($justifyContent: center, $flexDirection: column, $alignItems: flex-start);
+		margin-top: 60px;
+		.skillsSectionList{
+			@include flexLayout($justifyContent: center, $flexDirection: column, $alignItems: flex-start);
+            list-style:none;
+			font-weight: 300;
+            padding: 0;
+			margin: 0;
+			.skillsSectionItem{
+				@include flexLayout($flexDirection: column, $alignItems: flex-start);
+				margin: 13px 0;
+				height: 37px;
+				font-size: 18px;
+				.skillsSectionItemNote{
+					font-size: 0.75em;
+					font-weight: 300;
+					color: rgba(0, 0, 0, 0.5);
+				}
+			}
 		}
-    }
+		h2{
+			font-weight: 400;
+			font-size: 28px;
+		}
+		.skillsSectionIcon{
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			color: $primaryColor;
+			display: inline-block;
+		}
+		@media(min-width: 1024px){
+			margin-top: 0;
+		}
+	}
+	@media(min-width: 1024px){
+		@include flexLayout($flexDirection: row, $justifyContent: space-evenly, $alignItems: flex-start);
+	}
 }

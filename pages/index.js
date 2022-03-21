@@ -26,6 +26,9 @@ const Home = () => {
 				<meta name="author" content="Nick Milanos"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="description" content="Nick Milanos's Personal Website/ Interactive Portfolio, made with React.js/Next/js"/>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+				<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" /> 
 				<link rel="shortcut icon" type="image/x-icon" href="/laptop.ico"></link>
 		  </Head>
 		  <HeroImage />
