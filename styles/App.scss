@@ -41,7 +41,7 @@ body {
   height: 100%;
   width: 100%;
   font-weight: 100;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -87,12 +87,13 @@ h1 {
     font-size: 40px;
   }
 }
-h2, h3 {
+h2,
+h3 {
   color: $primaryColor;
   text-align: left;
 }
 h3 {
-	margin-bottom: 0
+  margin-bottom: 0;
 }
 h4 {
   margin-top: 0;
