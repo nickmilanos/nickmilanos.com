@@ -18,3 +18,5 @@ Other developers may get inspired by my work, if they lack ideas or knowledge of
 ## Status
 
 You can find the website at: www.nickmilanos.com
+
+- Note: This commit is after reverting strapi changes.
